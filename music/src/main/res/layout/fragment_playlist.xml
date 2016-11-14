@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.naman14.timber.widgets.MultiViewPager
+            <com.guoxiaoxing.music.widgets.MultiViewPager
                 android:id="@+id/playlistpager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

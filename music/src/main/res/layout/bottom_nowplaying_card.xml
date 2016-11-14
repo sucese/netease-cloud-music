@@ -7,7 +7,7 @@
     android:layout_gravity="top"
     android:background="?attr/windowBackground">
 
-    <com.naman14.timber.widgets.SquareImageView
+    <com.guoxiaoxing.music.widgets.SquareImageView
         android:id="@+id/album_art_nowplayingcard"
         android:layout_width="55dp"
         android:layout_height="55dp"
@@ -66,7 +66,7 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="5dp">
 
-        <com.naman14.timber.widgets.PlayPauseButton
+        <com.guoxiaoxing.music.widgets.PlayPauseButton
             android:id="@+id/play_pause"
             android:layout_width="23dp"
             android:layout_height="23dp"

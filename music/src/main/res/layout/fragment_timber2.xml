@@ -87,7 +87,7 @@
                         app:layout_heightPercent="80%"
                         app:layout_widthPercent="80%">
 
-                        <com.naman14.timber.widgets.CircleImageView
+                        <com.guoxiaoxing.music.widgets.CircleImageView
                             android:id="@+id/album_art"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -96,7 +96,7 @@
                             android:background="@android:color/transparent"
                             android:scaleType="centerCrop" />
 
-                        <com.naman14.timber.widgets.CircleImageView
+                        <com.guoxiaoxing.music.widgets.CircleImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"
@@ -141,7 +141,7 @@
                         </LinearLayout>
                     </FrameLayout>
 
-                    <com.naman14.timber.widgets.CircularSeekBar
+                    <com.guoxiaoxing.music.widgets.CircularSeekBar
                         android:id="@+id/song_progress_circular"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_centerInParent="true"

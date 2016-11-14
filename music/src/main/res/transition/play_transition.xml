@@ -6,7 +6,7 @@
 
     <transitionSet   >
         <transition
-            class="com.naman14.timber.transition.PlayTransition"/>
+            class="com.guoxiaoxing.music.transition.PlayTransition"/>
         <!--<targets>-->
             <!--<target android:excludeId="@id/icon" /> />-->
         <!--</targets>-->

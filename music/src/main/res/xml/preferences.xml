@@ -2,16 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.naman14.timber.widgets.ThemedPreferenceCategory android:title="@string/now_playing">
+    <com.guoxiaoxing.music.widgets.ThemedPreferenceCategory android:title="@string/now_playing">
 
         <Preference
             android:key="now_playing_selector"
             android:summary="@string/now_playing_selector"
             android:title="@string/now_playing" />
 
-    </com.naman14.timber.widgets.ThemedPreferenceCategory>
+    </com.guoxiaoxing.music.widgets.ThemedPreferenceCategory>
 
-    <com.naman14.timber.widgets.ThemedPreferenceCategory android:title="@string/personalisation">
+    <com.guoxiaoxing.music.widgets.ThemedPreferenceCategory android:title="@string/personalisation">
 
         <com.afollestad.appthemeengine.prefs.ATECheckBoxPreference
             android:defaultValue="true"
@@ -80,9 +80,9 @@
             android:title="@string/colored_nav_bar"
             app:ateKey_pref_checkBox="?ate_key" />
 
-    </com.naman14.timber.widgets.ThemedPreferenceCategory>
+    </com.guoxiaoxing.music.widgets.ThemedPreferenceCategory>
 
-    <com.naman14.timber.widgets.ThemedPreferenceCategory android:title="@string/other">
+    <com.guoxiaoxing.music.widgets.ThemedPreferenceCategory android:title="@string/other">
 
         <com.afollestad.appthemeengine.prefs.ATEListPreference
             android:defaultValue="last_opened"
@@ -107,9 +107,9 @@
             android:title="@string/pause_detach"
             app:ateKey_pref_checkBox="?ate_key" />
 
-    </com.naman14.timber.widgets.ThemedPreferenceCategory>
+    </com.guoxiaoxing.music.widgets.ThemedPreferenceCategory>
 
-    <com.naman14.timber.widgets.ThemedPreferenceCategory android:title="LastFM">
+    <com.guoxiaoxing.music.widgets.ThemedPreferenceCategory android:title="LastFM">
 
         <Preference
             android:key="lastfm_login"
@@ -117,9 +117,9 @@
             android:title="Login" />
 
 
-    </com.naman14.timber.widgets.ThemedPreferenceCategory>
+    </com.guoxiaoxing.music.widgets.ThemedPreferenceCategory>
 
-    <com.naman14.timber.widgets.ThemedPreferenceCategory android:title="@string/advanced">
+    <com.guoxiaoxing.music.widgets.ThemedPreferenceCategory android:title="@string/advanced">
 
         <com.afollestad.appthemeengine.prefs.ATECheckBoxPreference
             android:defaultValue="false"
@@ -128,7 +128,7 @@
             android:title="@string/xposed_trackselector"
             app:ateKey_pref_checkBox="?ate_key" />
 
-    </com.naman14.timber.widgets.ThemedPreferenceCategory>
+    </com.guoxiaoxing.music.widgets.ThemedPreferenceCategory>
 
 
 </PreferenceScreen>
