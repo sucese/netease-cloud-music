@@ -1,17 +1,3 @@
-/*
- * Copyright (C) 2015 Naman Dwivedi
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package com.guoxiaoxing.music.ui.activity;
 
 import android.Manifest;
@@ -37,19 +23,19 @@ import com.afollestad.appthemeengine.customizers.ATEActivityThemeCustomizer;
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.R;
+import com.guoxiaoxing.music.permission.Nammu;
+import com.guoxiaoxing.music.permission.PermissionCallback;
 import com.guoxiaoxing.music.ui.fragment.AlbumDetailFragment;
 import com.guoxiaoxing.music.ui.fragment.ArtistDetailFragment;
 import com.guoxiaoxing.music.ui.fragment.FoldersFragment;
 import com.guoxiaoxing.music.ui.fragment.MainFragment;
 import com.guoxiaoxing.music.ui.fragment.PlaylistFragment;
 import com.guoxiaoxing.music.ui.fragment.QueueFragment;
-import com.guoxiaoxing.music.permission.Nammu;
-import com.guoxiaoxing.music.permission.PermissionCallback;
-import com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.Helpers;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.TimberUtils;
+import com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -57,7 +43,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends BaseActivity implements ATEActivityThemeCustomizer {
-
 
     private static MainActivity sMainActivity;
     SlidingUpPanelLayout panelLayout;
@@ -74,7 +59,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
             Fragment fragment = new MainFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment).commitAllowingStateLoss();
-
         }
     };
     Runnable navigateNowplaying = new Runnable() {
@@ -196,7 +180,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
 
         addBackstackListener();
 
-        if(Intent.ACTION_VIEW.equals(action)) {
+        if (Intent.ACTION_VIEW.equals(action)) {
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
@@ -431,10 +415,9 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         });
     }
 
-
     @Override
     public int getActivityTheme() {
-        return isDarkTheme ? R.style.AppThemeNormalDark : R.style.AppThemeNormalLight;
+        return isDarkTheme ? R.style.AppThemeDark : R.style.AppThemeLight;
     }
 
     @Override

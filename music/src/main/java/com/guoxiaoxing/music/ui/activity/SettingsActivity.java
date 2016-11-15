@@ -1,17 +1,3 @@
-/*
- * Copyright (C) 2015 Naman Dwivedi
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package com.guoxiaoxing.music.ui.activity;
 
 import android.os.Bundle;
@@ -43,7 +29,7 @@ public class SettingsActivity extends BaseThemedActivity implements ColorChooser
     public void onCreate(Bundle savedInstanceState) {
 
         if (PreferencesUtility.getInstance(this).getTheme().equals("dark"))
-            setTheme(R.style.AppThemeNormalDark);
+            setTheme(R.style.AppThemeDark);
         else if (PreferencesUtility.getInstance(this).getTheme().equals("black"))
             setTheme(R.style.AppThemeNormalBlack);
         super.onCreate(savedInstanceState);
@@ -70,7 +56,6 @@ public class SettingsActivity extends BaseThemedActivity implements ColorChooser
             fragmentManager.beginTransaction()
                     .replace(R.id.fragment_container, fragment).commit();
         }
-
     }
 
     @Override
