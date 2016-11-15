@@ -21,8 +21,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.guoxiaoxing.music.helpers.MusicPlaybackTrack;
-import com.guoxiaoxing.music.utils.TimberUtils;
+import com.guoxiaoxing.music.receiver.MusicPlaybackTrack;
+import com.guoxiaoxing.music.util.TimberUtils;
 
 import java.util.ArrayList;
 import java.util.Iterator;

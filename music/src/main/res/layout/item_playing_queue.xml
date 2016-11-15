@@ -65,7 +65,7 @@
         </LinearLayout>
 
 
-        <com.guoxiaoxing.music.widgets.MusicVisualizer
+        <com.guoxiaoxing.music.widget.MusicVisualizer
             android:id="@+id/visualizer"
             android:layout_width="30dp"
             android:layout_height="40dp"
@@ -75,7 +75,7 @@
             android:layout_toLeftOf="@+id/popup_menu"
             android:visibility="gone" />
 
-        <com.guoxiaoxing.music.widgets.PopupImageView
+        <com.guoxiaoxing.music.widget.PopupImageView
             android:id="@+id/popup_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

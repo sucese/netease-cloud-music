@@ -63,7 +63,7 @@
 
         </LinearLayout>
 
-        <com.guoxiaoxing.music.widgets.MusicVisualizer
+        <com.guoxiaoxing.music.widget.MusicVisualizer
             android:id="@+id/visualizer"
             android:layout_width="30dp"
             android:layout_height="40dp"

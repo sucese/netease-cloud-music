@@ -5,7 +5,7 @@ import android.app.Application;
 import com.afollestad.appthemeengine.ATE;
 import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.core.CrashlyticsCore;
-import com.guoxiaoxing.music.permissions.Nammu;
+import com.guoxiaoxing.music.permission.Nammu;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.utils.L;

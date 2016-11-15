@@ -17,9 +17,9 @@ import android.provider.BaseColumns;
 import android.provider.MediaStore;
 import android.widget.Toast;
 
-import com.guoxiaoxing.music.dataloaders.SongLoader;
-import com.guoxiaoxing.music.helpers.MusicPlaybackTrack;
-import com.guoxiaoxing.music.utils.TimberUtils.IdType;
+import com.guoxiaoxing.music.dataloader.SongLoader;
+import com.guoxiaoxing.music.receiver.MusicPlaybackTrack;
+import com.guoxiaoxing.music.util.TimberUtils.IdType;
 
 import java.util.Arrays;
 import java.util.WeakHashMap;

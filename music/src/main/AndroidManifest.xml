@@ -23,7 +23,7 @@
         tools:replace="android:allowBackup">
 
         <activity
-            android:name="com.guoxiaoxing.music.activities.MainActivity"
+            android:name="com.guoxiaoxing.music.ui.activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -69,24 +69,24 @@
         </activity>
 
         <activity
-            android:name="com.guoxiaoxing.music.activities.SettingsActivity"
+            android:name="com.guoxiaoxing.music.ui.activity.SettingsActivity"
             android:theme="@style/AppThemeNormalLight" />
 
         <activity
-            android:name="com.guoxiaoxing.music.activities.PlaylistDetailActivity"
+            android:name="com.guoxiaoxing.music.ui.activity.PlaylistDetailActivity"
             android:theme="@style/AppTheme.FullScreen.Light" />
 
         <activity
-            android:name="com.guoxiaoxing.music.activities.SearchActivity"
+            android:name="com.guoxiaoxing.music.ui.activity.SearchActivity"
             android:theme="@style/AppThemeNormalLight" />
 
         <activity
-            android:name="com.guoxiaoxing.music.activities.NowPlayingActivity"
+            android:name="com.guoxiaoxing.music.ui.activity.NowPlayingActivity"
             android:theme="@style/AppTheme.FullScreen.Light" />
 
-        <activity android:name="com.guoxiaoxing.music.activities.DonateActivity"/>
+        <activity android:name="com.guoxiaoxing.music.ui.activity.DonateActivity"/>
 
-        <receiver android:name="com.guoxiaoxing.music.helpers.MediaButtonIntentReceiver">
+        <receiver android:name="com.guoxiaoxing.music.receiver.MediaButtonIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="android.media.AUDIO_BECOMING_NOISY" />
@@ -111,7 +111,7 @@
             android:name="io.fabric.ApiKey"
             android:value="@string/fabric_api_key" />
 
-        <receiver android:name="com.guoxiaoxing.music.widgets.desktop.StandardWidget" android:label="@string/widget_standard">
+        <receiver android:name="com.guoxiaoxing.music.widget.desktop.StandardWidget" android:label="@string/widget_standard">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.naman14.timber.metachanged" />
@@ -121,7 +121,7 @@
                 android:resource="@xml/widget_standard" />
         </receiver>
 
-        <receiver android:name="com.guoxiaoxing.music.widgets.desktop.WhiteWidget" android:label="@string/widget_white">
+        <receiver android:name="com.guoxiaoxing.music.widget.desktop.WhiteWidget" android:label="@string/widget_white">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.naman14.timber.metachanged" />
@@ -131,7 +131,7 @@
                 android:resource="@xml/widget_white" />
         </receiver>
 
-        <receiver android:name="com.guoxiaoxing.music.widgets.desktop.SmallWidget" android:label="@string/widget_small">
+        <receiver android:name="com.guoxiaoxing.music.widget.desktop.SmallWidget" android:label="@string/widget_small">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.naman14.timber.metachanged" />

@@ -5,7 +5,7 @@
     android:background="?attr/selectableItemBackground">
 
 
-    <com.guoxiaoxing.music.widgets.SquareImageView
+    <com.guoxiaoxing.music.widget.SquareImageView
         android:id="@+id/album_art"
         android:layout_width="80dp"
         android:layout_height="match_parent"
