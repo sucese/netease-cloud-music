@@ -31,7 +31,6 @@ android {
         disable 'MissingTranslation'
         disable 'ExtraTranslation'
     }
-
 }
 
 repositories {
@@ -66,6 +65,4 @@ dependencies {
         transitive = true;
     }
     compile 'com.anjlab.android.iab.v3:library:1.0.+'
-
-
 }

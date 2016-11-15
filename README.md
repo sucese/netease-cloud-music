@@ -11,9 +11,10 @@ A material design style music player for android
 
 ## Thanks
 
-* [Eleven Music Player](https://github.com/CyanogenMod/android_packages_apps_Eleven)
-* [TimelyTextView](https://github.com/adnan-SM/TimelyTextView)
-* [MultiViewPager](https://github.com/Pixplicity/MultiViewPager)
-* [PlayPauseButton](https://github.com/recruit-lifestyle/PlayPauseButton)
-* [CircularSeekBar](https://github.com/devadvance/circularseekbar)
-* [Nammu](https://github.com/tajchert/Nammu)
+- [naman14/Timber](https://github.com/naman14/Timber)
+- [Eleven Music Player](https://github.com/CyanogenMod/android_packages_apps_Eleven)
+- [TimelyTextView](https://github.com/adnan-SM/TimelyTextView)
+- [MultiViewPager](https://github.com/Pixplicity/MultiViewPager)
+- [PlayPauseButton](https://github.com/recruit-lifestyle/PlayPauseButton)
+- [CircularSeekBar](https://github.com/devadvance/circularseekbar)
+- [Nammu](https://github.com/tajchert/Nammu)

@@ -1,4 +1,4 @@
-package com.guoxiaoxing.music.receiver;
+package com.guoxiaoxing.music.aidl;
 
 import android.os.Parcel;
 import android.os.Parcelable;

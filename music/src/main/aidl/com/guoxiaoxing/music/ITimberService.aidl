@@ -1,6 +1,6 @@
 package com.guoxiaoxing.music;
 
-import com.guoxiaoxing.music.receiver.MusicPlaybackTrack;
+import com.guoxiaoxing.music.aidl.MusicPlaybackTrack;
 
 interface ITimberService
 {

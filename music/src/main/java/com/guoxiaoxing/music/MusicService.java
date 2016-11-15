@@ -47,7 +47,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.guoxiaoxing.music.receiver.MediaButtonIntentReceiver;
-import com.guoxiaoxing.music.receiver.MusicPlaybackTrack;
+import com.guoxiaoxing.music.aidl.MusicPlaybackTrack;
 import com.guoxiaoxing.music.lastfmapi.LastFmClient;
 import com.guoxiaoxing.music.lastfmapi.models.ScrobbleQuery;
 import com.guoxiaoxing.music.permission.Nammu;

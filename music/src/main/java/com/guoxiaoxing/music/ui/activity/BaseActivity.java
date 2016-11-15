@@ -1,18 +1,3 @@
-/*
- * Copyright (C) 2012 Andrew Neal
- * Copyright (C) 2014 The CyanogenMod Project
- * Copyright (C) 2015 Naman Dwivedi
- *
- * Licensed under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with the
- * License. You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law
- * or agreed to in writing, software distributed under the License is
- * distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
-
 package com.guoxiaoxing.music.ui.activity;
 
 import android.content.BroadcastReceiver;
@@ -40,11 +25,11 @@ import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.MusicService;
 import com.guoxiaoxing.music.R;
 import com.guoxiaoxing.music.listener.MusicStateListener;
-import com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout;
 import com.guoxiaoxing.music.ui.subfragment.QuickControlsFragment;
 import com.guoxiaoxing.music.util.Helpers;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.TimberUtils;
+import com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -85,14 +70,11 @@ public class BaseActivity extends ATEActivity implements ServiceConnection, Musi
         filter.addAction(MusicService.TRACK_ERROR);
 
         registerReceiver(mPlaybackStatus, filter);
-
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-
-
     }
 
     @Override
@@ -126,6 +108,7 @@ public class BaseActivity extends ATEActivity implements ServiceConnection, Musi
         try {
             unregisterReceiver(mPlaybackStatus);
         } catch (final Throwable e) {
+
         }
         mMusicStateListener.clear();
     }

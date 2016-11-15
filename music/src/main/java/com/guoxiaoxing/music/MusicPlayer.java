@@ -18,7 +18,7 @@ import android.provider.MediaStore;
 import android.widget.Toast;
 
 import com.guoxiaoxing.music.dataloader.SongLoader;
-import com.guoxiaoxing.music.receiver.MusicPlaybackTrack;
+import com.guoxiaoxing.music.aidl.MusicPlaybackTrack;
 import com.guoxiaoxing.music.util.TimberUtils.IdType;
 
 import java.util.Arrays;
