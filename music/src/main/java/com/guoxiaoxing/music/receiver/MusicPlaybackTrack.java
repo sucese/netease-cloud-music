@@ -67,7 +67,6 @@ public class MusicPlaybackTrack implements Parcelable {
 
             }
         }
-
         return super.equals(o);
     }
 }
