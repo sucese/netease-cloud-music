@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     TextView songtitle, songartist;
     ImageView albumart;
     String action;
-    Map<String, Runnable> navigationMap = new HashMap<String, Runnable>();
+    Map<String, Runnable> navigationMap = new HashMap<>();
     Handler navDrawerRunnable = new Handler();
     Runnable runnable;
     Runnable navigateLibrary = new Runnable() {
@@ -142,6 +142,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         isDarkTheme = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false);
 
         super.onCreate(savedInstanceState);
+        enableNormalTitle();
         setContentView(R.layout.activity_main);
 
         navigationMap.put(Constants.NAVIGATE_LIBRARY, navigateLibrary);
@@ -192,7 +193,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
                 }
             }, 350);
         }
-
     }
 
     private void loadEverything() {
@@ -269,11 +269,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     }
 
     private void setupNavigationIcons(NavigationView navigationView) {
-
-        //material-icon-lib currently doesn't work with navigationview of design support library 22.2.0+
-        //set icons manually for now
-        //https://github.com/code-mc/material-icon-lib/issues/15
-
         if (!isDarkTheme) {
             navigationView.getMenu().findItem(R.id.nav_library).setIcon(R.drawable.library_music);
             navigationView.getMenu().findItem(R.id.nav_playlists).setIcon(R.drawable.playlist_play);
@@ -303,7 +298,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     private void updatePosition(final MenuItem menuItem) {

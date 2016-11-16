@@ -105,4 +105,10 @@
     <string name="count_artist"><xliff:g id="count">%d</xliff:g> 位艺术家</string>
     <string name="count_artists"><xliff:g id="count">%d</xliff:g> 位艺术家</string>
 
+    <string name="activity_settings">设置</string>
+    <string name="activity_play_list">播放列表</string>
+    <string name="activity_search">搜索</string>
+    <string name="activity_now_playing">正在播放</string>
+    <string name="activity_donate">捐赠鼓励</string>
+
 </resources>

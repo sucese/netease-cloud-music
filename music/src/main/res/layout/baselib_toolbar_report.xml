@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/base_toolbar_back_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/baselib_title_back_orange_icon"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/base_toolbar_report"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/base_toolbar_back_custom"
+        android:gravity="center_vertical"
+        android:text="战报"
+        android:textColor="@color/base_fc_c1"
+        android:textSize="@dimen/base_fc_s3"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/base_toolbar_title_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/base_fc_c2"
+        android:text="报表"
+        android:textSize="@dimen/base_fc_s2"/>
+
+    <TextView
+        android:id="@+id/base_toolbar_submit_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:drawableRight="@drawable/baselib_title_arrow_down_orange_icon"
+        android:gravity="center"
+        android:maxEms="3"
+        android:maxLines="1"
+        android:textColor="@color/base_fc_c1"
+        android:textSize="@dimen/base_fc_s3"
+        android:visibility="gone"
+        tools:text="全国"/>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/baselib_shape_btn_press_orange"
+          android:state_pressed="true"/>
+    <item android:drawable="@drawable/baselib_shape_btn_normal_orange"
+          android:state_pressed="false"/>
+
+</selector>

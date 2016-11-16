@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/base_toolbar_back_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:minWidth="24dp"
+        android:textColor="@color/base_fc_c1"
+        android:textSize="@dimen/base_fc_s3"/>
+
+    <FrameLayout
+        android:id="@+id/base_toolbar_search"
+        android:layout_width="207dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/baselib_search_bg_grey">
+
+        <Button
+            android:id="@+id/base_toolbar_search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:clickable="false"
+            android:drawableLeft="@drawable/baselib_title_search_grey_icon"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="搜索"
+            android:textColor="@color/base_fc_c5"
+            android:textSize="@dimen/base_fc_s5"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/base_toolbar_submit_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:maxEms="3"
+        android:maxLines="1"
+        android:textColor="@color/base_fc_c1"
+        android:textSize="@dimen/base_fc_s3"
+        android:visibility="gone"
+        tools:text="确定"/>
+</RelativeLayout>

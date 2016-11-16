@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/base_toolbar_back"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:textColor="@color/base_fc_c1"
+        android:textSize="@dimen/base_fc_s3"
+        android:minWidth="24dp"
+        tools:text="取消"/>
+
+    <FrameLayout
+        android:id="@+id/base_toolbar_search"
+        android:layout_width="207dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/base_toolbar_title_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textColor="@color/base_fc_c2"
+            android:textSize="@dimen/base_fc_s2"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/base_toolbar_submit_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:maxEms="3"
+        android:maxLines="1"
+        android:textColor="@color/base_fc_c1"
+        android:textSize="@dimen/base_fc_s3"
+        android:visibility="gone"
+        tools:text="确定"/>
+</RelativeLayout>

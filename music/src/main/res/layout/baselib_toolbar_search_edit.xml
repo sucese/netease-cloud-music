@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/base_toolbar_search"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/baselib_search_bg_grey"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/base_toolbar_search_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/baselib_title_search_grey_icon"
+            android:drawablePadding="8dp"
+            android:hint="请输入品牌/车系"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:textColor="@color/base_fc_c2"
+            android:textColorHint="@color/base_fc_c5"
+            android:textSize="@dimen/base_fc_s5"/>
+
+        <ImageView
+            android:id="@+id/base_toolbar_close_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:paddingRight="8dp"
+            android:src="@drawable/baselib_title_search_close_grey_icon"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/base_toolbar_back_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="16dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/base_fc_c1"
+        android:textSize="@dimen/base_fc_s3"/>
+</LinearLayout>

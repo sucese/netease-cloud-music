@@ -42,4 +42,42 @@
 
     <color name="colorPrimaryDarkDefault">#37474F</color>
     <color name="colorAccentDarkDefault">#2196F3</color>
+
+    <!--链接-->
+    <color name="base_fc_c1">#FF571A</color>
+    <color name="base_fc_c2">#000</color>
+    <!--标题-->
+    <color name="base_fc_c3">#1A1A1A</color>
+    <!--正文-->
+    <color name="base_fc_c4">#666</color>
+    <!--辅助文字-->
+    <color name="base_fc_c5">#999</color>
+    <!--辅助文字/顶部色块/时间色块-->
+    <color name="base_fc_c6">#CCC</color>
+    <!--顶部底部分割线/向右的箭头-->
+    <color name="base_fc_c7">#B3B3B3</color>
+    <!--工作台分割线/(正文)浅色隔线/Tag边框/时间色块-->
+    <color name="base_fc_c8">#E6E6E6</color>
+    <!--默认背景色-->
+    <color name="base_fc_c9">#F5F5F5</color>
+    <!--浅色背景-->
+    <color name="base_fc_c10">#F8F8F8</color>
+    <!--反白-->
+    <color name="base_fc_c11">#FFF</color>
+    <!--等级icon-->
+    <color name="base_fc_c12">#40CEB5</color>
+    <!--顶部色块-->
+    <color name="base_fc_c13">#FF7340</color>
+    <!--提示框背景-->
+    <color name="base_fc_c14">#FFF2BD</color>
+    <!--提示文字-->
+    <color name="base_fc_c15">#B97F60</color>
+    <!--警示文字-->
+    <color name="base_fc_c16">#FF3333</color>
+    <!--订单详情-->
+    <color name="base_fc_c17">#45A515</color>
+    <!--按钮highlight效果-->
+    <color name="base_fc_c18">#FF4600</color>
+    <color name="base_fc_c19">#D9D9D9</color>
+    <color name="base_fc_c20">#EAEAEA</color>
 </resources>

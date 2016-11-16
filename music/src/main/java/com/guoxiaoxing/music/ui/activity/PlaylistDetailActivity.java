@@ -104,6 +104,7 @@ public class PlaylistDetailActivity extends BaseActivity implements ATEActivityT
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        enableNormalTitle();
         setContentView(R.layout.activity_playlist_detail);
 
         action = getIntent().getAction();
