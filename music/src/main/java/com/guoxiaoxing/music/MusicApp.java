@@ -12,6 +12,13 @@ import com.nostra13.universalimageloader.utils.L;
 
 import io.fabric.sdk.android.Fabric;
 
+/**
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by
+ * guoxiaoxingse@gmail.com
+ *
+ * @author guoxiaoxing
+ * @since 16/11/17 上午10:29
+ */
 public class MusicApp extends Application {
 
     private static MusicApp mInstance;
