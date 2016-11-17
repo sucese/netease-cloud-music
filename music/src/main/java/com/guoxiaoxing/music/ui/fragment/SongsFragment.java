@@ -16,7 +16,6 @@ package com.guoxiaoxing.music.ui.fragment;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,7 +29,8 @@ import com.guoxiaoxing.music.adapter.SongsListAdapter;
 import com.guoxiaoxing.music.dataloader.SongLoader;
 import com.guoxiaoxing.music.listener.MusicStateListener;
 import com.guoxiaoxing.music.model.Song;
-import com.guoxiaoxing.music.ui.activity.BaseActivity;
+import com.guoxiaoxing.music.ui.base.BaseActivity;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 import com.guoxiaoxing.music.util.SortOrder;
 import com.guoxiaoxing.music.widget.DividerItemDecoration;
@@ -38,7 +38,7 @@ import com.guoxiaoxing.music.widget.FastScroller;
 
 import java.util.List;
 
-public class SongsFragment extends Fragment implements MusicStateListener {
+public class SongsFragment extends BaseFragment implements MusicStateListener {
 
     private SongsListAdapter mAdapter;
     private RecyclerView recyclerView;

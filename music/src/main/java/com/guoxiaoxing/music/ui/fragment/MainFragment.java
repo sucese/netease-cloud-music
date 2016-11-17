@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.afollestad.appthemeengine.ATE;
 import com.afollestad.appthemeengine.Config;
 import com.guoxiaoxing.music.R;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.ATEUtils;
 import com.guoxiaoxing.music.util.Helpers;
 import com.guoxiaoxing.music.util.PreferencesUtility;
@@ -28,7 +29,7 @@ import java.util.List;
  * @author guoxiaoxing
  * @since 16/11/17 上午9:50
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends BaseFragment {
 
     PreferencesUtility mPreferences;
     ViewPager viewPager;

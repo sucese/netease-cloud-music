@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
@@ -39,6 +38,7 @@ import com.guoxiaoxing.music.lastfmapi.callbacks.ArtistInfoListener;
 import com.guoxiaoxing.music.lastfmapi.models.ArtistQuery;
 import com.guoxiaoxing.music.lastfmapi.models.LastfmArtist;
 import com.guoxiaoxing.music.model.Artist;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.ATEUtils;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.Helpers;
@@ -47,7 +47,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
-public class ArtistDetailFragment extends Fragment {
+public class ArtistDetailFragment extends BaseFragment {
 
     long artistID = -1;
 

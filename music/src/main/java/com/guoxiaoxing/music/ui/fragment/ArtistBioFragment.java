@@ -28,11 +28,12 @@ import com.guoxiaoxing.music.lastfmapi.callbacks.ArtistInfoListener;
 import com.guoxiaoxing.music.lastfmapi.models.ArtistQuery;
 import com.guoxiaoxing.music.lastfmapi.models.LastfmArtist;
 import com.guoxiaoxing.music.model.Artist;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.ui.subfragment.ArtistTagFragment;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.widget.MultiViewPager;
 
-public class ArtistBioFragment extends Fragment {
+public class ArtistBioFragment extends BaseFragment {
 
     long artistID = -1;
 

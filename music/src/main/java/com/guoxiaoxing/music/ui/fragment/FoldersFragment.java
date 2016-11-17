@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,6 +18,7 @@ import android.widget.ProgressBar;
 import com.afollestad.appthemeengine.ATE;
 import com.guoxiaoxing.music.R;
 import com.guoxiaoxing.music.adapter.FolderAdapter;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 import com.guoxiaoxing.music.widget.DividerItemDecoration;
 import com.guoxiaoxing.music.widget.FastScroller;
@@ -32,7 +32,7 @@ import java.io.File;
  * @author guoxiaoxing
  * @since 16/11/17 下午4:39
  */
-public class FoldersFragment extends Fragment {
+public class FoldersFragment extends BaseFragment {
 
     private FolderAdapter mAdapter;
     private RecyclerView recyclerView;

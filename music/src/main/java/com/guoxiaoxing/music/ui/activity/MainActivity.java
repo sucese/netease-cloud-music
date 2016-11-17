@@ -14,7 +14,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,6 +25,7 @@ import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.R;
 import com.guoxiaoxing.music.permission.Nammu;
 import com.guoxiaoxing.music.permission.PermissionCallback;
+import com.guoxiaoxing.music.ui.base.BaseActivity;
 import com.guoxiaoxing.music.ui.fragment.AlbumDetailFragment;
 import com.guoxiaoxing.music.ui.fragment.ArtistDetailFragment;
 import com.guoxiaoxing.music.ui.fragment.FoldersFragment;
@@ -145,7 +145,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         super.onCreate(savedInstanceState);
 
         mTitleView = enableCustomView(R.layout.toolbar_dashboard);
-
         setContentView(R.layout.activity_main);
 
         sMainActivity = this;

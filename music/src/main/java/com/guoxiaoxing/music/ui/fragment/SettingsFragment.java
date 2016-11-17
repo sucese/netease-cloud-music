@@ -29,12 +29,12 @@ import com.afollestad.appthemeengine.prefs.ATECheckBoxPreference;
 import com.afollestad.appthemeengine.prefs.ATEColorPreference;
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.ui.activity.SettingsActivity;
-import com.guoxiaoxing.music.widget.dialog.LastFmLoginDialog;
 import com.guoxiaoxing.music.lastfmapi.LastFmClient;
+import com.guoxiaoxing.music.ui.activity.SettingsActivity;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.PreferencesUtility;
+import com.guoxiaoxing.music.widget.dialog.LastFmLoginDialog;
 
 public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 

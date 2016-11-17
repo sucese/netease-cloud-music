@@ -30,7 +30,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,18 +38,19 @@ import com.afollestad.appthemeengine.ATE;
 import com.guoxiaoxing.music.R;
 import com.guoxiaoxing.music.adapter.PlaylistAdapter;
 import com.guoxiaoxing.music.dataloader.PlaylistLoader;
-import com.guoxiaoxing.music.widget.dialog.CreatePlaylistDialog;
 import com.guoxiaoxing.music.model.Playlist;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.ui.subfragment.PlaylistPagerFragment;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 import com.guoxiaoxing.music.widget.DividerItemDecoration;
 import com.guoxiaoxing.music.widget.MultiViewPager;
+import com.guoxiaoxing.music.widget.dialog.CreatePlaylistDialog;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlaylistFragment extends Fragment {
+public class PlaylistFragment extends BaseFragment {
 
     int playlistcount;
     FragmentStatePagerAdapter adapter;

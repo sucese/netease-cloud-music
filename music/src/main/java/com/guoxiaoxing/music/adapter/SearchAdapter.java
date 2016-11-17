@@ -28,7 +28,6 @@ import android.widget.TextView;
 
 import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.widget.dialog.AddPlaylistDialog;
 import com.guoxiaoxing.music.lastfmapi.LastFmClient;
 import com.guoxiaoxing.music.lastfmapi.callbacks.ArtistInfoListener;
 import com.guoxiaoxing.music.lastfmapi.models.ArtistQuery;
@@ -38,6 +37,7 @@ import com.guoxiaoxing.music.model.Artist;
 import com.guoxiaoxing.music.model.Song;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.TimberUtils;
+import com.guoxiaoxing.music.widget.dialog.AddPlaylistDialog;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;

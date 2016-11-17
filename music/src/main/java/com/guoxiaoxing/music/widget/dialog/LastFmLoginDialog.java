@@ -11,10 +11,10 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.ui.fragment.SettingsFragment;
 import com.guoxiaoxing.music.lastfmapi.LastFmClient;
 import com.guoxiaoxing.music.lastfmapi.callbacks.UserListener;
 import com.guoxiaoxing.music.lastfmapi.models.UserLoginQuery;
+import com.guoxiaoxing.music.ui.fragment.SettingsFragment;
 
 /**
  * Created by christoph on 17.07.16.

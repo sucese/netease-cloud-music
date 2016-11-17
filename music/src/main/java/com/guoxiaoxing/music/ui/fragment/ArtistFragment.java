@@ -17,12 +17,9 @@ package com.guoxiaoxing.music.ui.fragment;
 import android.graphics.Rect;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +28,7 @@ import com.guoxiaoxing.music.R;
 import com.guoxiaoxing.music.adapter.ArtistAdapter;
 import com.guoxiaoxing.music.dataloader.ArtistLoader;
 import com.guoxiaoxing.music.model.Artist;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 import com.guoxiaoxing.music.util.SortOrder;
 import com.guoxiaoxing.music.widget.DividerItemDecoration;
@@ -38,7 +36,7 @@ import com.guoxiaoxing.music.widget.FastScroller;
 
 import java.util.List;
 
-public class ArtistFragment extends Fragment {
+public class ArtistFragment extends BaseFragment {
 
     private ArtistAdapter mAdapter;
     private RecyclerView recyclerView;

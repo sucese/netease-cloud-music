@@ -31,7 +31,6 @@ import android.widget.TextView;
 import com.afollestad.appthemeengine.Config;
 import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.widget.dialog.AddPlaylistDialog;
 import com.guoxiaoxing.music.model.Song;
 import com.guoxiaoxing.music.util.Helpers;
 import com.guoxiaoxing.music.util.NavigationUtils;
@@ -39,6 +38,7 @@ import com.guoxiaoxing.music.util.PreferencesUtility;
 import com.guoxiaoxing.music.util.TimberUtils;
 import com.guoxiaoxing.music.widget.BubbleTextGetter;
 import com.guoxiaoxing.music.widget.MusicVisualizer;
+import com.guoxiaoxing.music.widget.dialog.AddPlaylistDialog;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 

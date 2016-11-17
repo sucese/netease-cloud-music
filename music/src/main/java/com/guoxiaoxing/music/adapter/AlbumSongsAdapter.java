@@ -28,10 +28,10 @@ import android.widget.TextView;
 
 import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.widget.dialog.AddPlaylistDialog;
 import com.guoxiaoxing.music.model.Song;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.TimberUtils;
+import com.guoxiaoxing.music.widget.dialog.AddPlaylistDialog;
 
 import java.util.List;
 

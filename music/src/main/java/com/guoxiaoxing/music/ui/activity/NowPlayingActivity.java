@@ -12,6 +12,7 @@ import com.afollestad.appthemeengine.Config;
 import com.afollestad.appthemeengine.customizers.ATEActivityThemeCustomizer;
 import com.afollestad.appthemeengine.customizers.ATEToolbarCustomizer;
 import com.guoxiaoxing.music.R;
+import com.guoxiaoxing.music.ui.base.BaseActivity;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.PreferencesUtility;

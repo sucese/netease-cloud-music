@@ -1,6 +1,16 @@
 package com.guoxiaoxing.music.timely.model;
 
-import com.guoxiaoxing.music.timely.model.number.*;
+import com.guoxiaoxing.music.timely.model.number.Eight;
+import com.guoxiaoxing.music.timely.model.number.Five;
+import com.guoxiaoxing.music.timely.model.number.Four;
+import com.guoxiaoxing.music.timely.model.number.Nine;
+import com.guoxiaoxing.music.timely.model.number.Null;
+import com.guoxiaoxing.music.timely.model.number.One;
+import com.guoxiaoxing.music.timely.model.number.Seven;
+import com.guoxiaoxing.music.timely.model.number.Six;
+import com.guoxiaoxing.music.timely.model.number.Three;
+import com.guoxiaoxing.music.timely.model.number.Two;
+import com.guoxiaoxing.music.timely.model.number.Zero;
 
 import java.security.InvalidParameterException;
 

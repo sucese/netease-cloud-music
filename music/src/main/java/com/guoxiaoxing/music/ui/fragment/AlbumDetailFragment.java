@@ -1,16 +1,3 @@
-/*
- * Copyright (C) 2015 Naman Dwivedi
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
 package com.guoxiaoxing.music.ui.fragment;
 
 import android.annotation.TargetApi;
@@ -23,7 +10,6 @@ import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
@@ -32,8 +18,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.transition.Transition;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +33,7 @@ import com.guoxiaoxing.music.dataloader.AlbumSongLoader;
 import com.guoxiaoxing.music.listener.SimplelTransitionListener;
 import com.guoxiaoxing.music.model.Album;
 import com.guoxiaoxing.music.model.Song;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.ATEUtils;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.FabAnimationUtils;
@@ -67,7 +52,7 @@ import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 
 import java.util.List;
 
-public class AlbumDetailFragment extends Fragment {
+public class AlbumDetailFragment extends BaseFragment {
 
     long albumID = -1;
 
@@ -354,7 +339,5 @@ public class AlbumDetailFragment extends Fragment {
         public void onTransitionStart(Transition paramTransition) {
             FabAnimationUtils.scaleOut(fab, 0, null);
         }
-
     }
-
 }

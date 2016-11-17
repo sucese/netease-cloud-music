@@ -8,8 +8,8 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.guoxiaoxing.music.MusicPlayer;
-import com.guoxiaoxing.music.ui.fragment.PlaylistFragment;
 import com.guoxiaoxing.music.model.Song;
+import com.guoxiaoxing.music.ui.fragment.PlaylistFragment;
 
 /**
  * Created by naman on 20/12/15.

@@ -17,7 +17,6 @@ package com.guoxiaoxing.music.ui.fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,14 +30,15 @@ import android.view.ViewGroup;
 import com.afollestad.appthemeengine.ATE;
 import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.ui.activity.BaseActivity;
 import com.guoxiaoxing.music.adapter.PlayingQueueAdapter;
 import com.guoxiaoxing.music.dataloader.QueueLoader;
 import com.guoxiaoxing.music.listener.MusicStateListener;
 import com.guoxiaoxing.music.model.Song;
+import com.guoxiaoxing.music.ui.base.BaseActivity;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.widget.DragSortRecycler;
 
-public class QueueFragment extends Fragment implements MusicStateListener {
+public class QueueFragment extends BaseFragment implements MusicStateListener {
 
     private PlayingQueueAdapter mAdapter;
     private RecyclerView recyclerView;

@@ -38,6 +38,7 @@ import com.guoxiaoxing.music.model.Album;
 import com.guoxiaoxing.music.model.Artist;
 import com.guoxiaoxing.music.model.Song;
 import com.guoxiaoxing.music.provider.SearchHistory;
+import com.guoxiaoxing.music.ui.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -15,7 +15,6 @@
 package com.guoxiaoxing.music.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,12 +25,13 @@ import com.guoxiaoxing.music.R;
 import com.guoxiaoxing.music.adapter.ArtistSongAdapter;
 import com.guoxiaoxing.music.dataloader.ArtistSongLoader;
 import com.guoxiaoxing.music.model.Song;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.widget.DividerItemDecoration;
 
 import java.util.ArrayList;
 
-public class ArtistMusicFragment extends Fragment {
+public class ArtistMusicFragment extends BaseFragment {
 
     public static RecyclerView songsRecyclerview;
     long artistID = -1;

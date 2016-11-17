@@ -1,4 +1,4 @@
-package com.guoxiaoxing.music.ui.activity;
+package com.guoxiaoxing.music.ui.base;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;

@@ -50,6 +50,7 @@ import com.guoxiaoxing.music.dataloader.SongLoader;
 import com.guoxiaoxing.music.dataloader.TopTracksLoader;
 import com.guoxiaoxing.music.listener.SimplelTransitionListener;
 import com.guoxiaoxing.music.model.Song;
+import com.guoxiaoxing.music.ui.base.BaseActivity;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 import com.guoxiaoxing.music.util.TimberUtils;

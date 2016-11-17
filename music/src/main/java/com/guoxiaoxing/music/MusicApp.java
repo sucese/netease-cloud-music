@@ -50,6 +50,7 @@ public class MusicApp extends Application {
                     .activityTheme(R.style.AppThemeLight)
                     .primaryColorRes(R.color.primary)
                     .accentColorRes(R.color.accent)
+                    .statusBarColorRes(R.color.primary)
                     .coloredNavigationBar(false)
                     .usingMaterialDialogs(true)
                     .commit();
@@ -59,6 +60,7 @@ public class MusicApp extends Application {
                     .activityTheme(R.style.AppThemeDark)
                     .primaryColorRes(R.color.colorPrimaryDarkDefault)
                     .accentColorRes(R.color.colorAccentDarkDefault)
+                    .statusBarColorRes(R.color.colorPrimaryDarkDefault)
                     .coloredNavigationBar(false)
                     .usingMaterialDialogs(true)
                     .commit();
@@ -69,6 +71,7 @@ public class MusicApp extends Application {
                     .coloredActionBar(false)
                     .primaryColorRes(R.color.primary)
                     .accentColorRes(R.color.accent)
+                    .statusBarColorRes(R.color.primary)
                     .coloredNavigationBar(false)
                     .usingMaterialDialogs(true)
                     .commit();
@@ -79,6 +82,7 @@ public class MusicApp extends Application {
                     .coloredActionBar(false)
                     .primaryColorRes(R.color.colorPrimaryDarkDefault)
                     .accentColorRes(R.color.colorAccentDarkDefault)
+                    .statusBarColorRes(R.color.colorPrimaryDarkDefault)
                     .coloredNavigationBar(true)
                     .usingMaterialDialogs(true)
                     .commit();

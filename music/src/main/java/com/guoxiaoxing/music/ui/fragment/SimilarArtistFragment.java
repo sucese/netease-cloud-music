@@ -15,7 +15,6 @@
 package com.guoxiaoxing.music.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,9 +26,10 @@ import com.guoxiaoxing.music.lastfmapi.callbacks.ArtistInfoListener;
 import com.guoxiaoxing.music.lastfmapi.models.ArtistQuery;
 import com.guoxiaoxing.music.lastfmapi.models.LastfmArtist;
 import com.guoxiaoxing.music.model.Artist;
+import com.guoxiaoxing.music.ui.base.BaseFragment;
 import com.guoxiaoxing.music.util.Constants;
 
-public class SimilarArtistFragment extends Fragment {
+public class SimilarArtistFragment extends BaseFragment {
 
     long artistID = -1;
 
