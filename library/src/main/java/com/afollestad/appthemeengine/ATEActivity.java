@@ -6,7 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 
 /**
- * @author Aidan Follestad (afollestad)
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by
+ * guoxiaoxingse@gmail.com
+ *
+ * @author guoxiaoxing
+ * @since 16/11/17 上午10:24
  */
 public class ATEActivity extends AppCompatActivity {
 
