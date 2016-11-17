@@ -5,6 +5,6 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <include layout="@layout/baselib_toolbar_common"/>
+    <include layout="@layout/toolbar_common"/>
 
 </LinearLayout>

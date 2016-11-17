@@ -2,11 +2,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/baselib_toolbar_simple_global_search"
+    android:id="@+id/baselib_toolbar_simple"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    tools:showIn="@layout/baselib_toolbar_common">
+    tools:showIn="@layout/toolbar_common">
 
     <TextView
         android:id="@+id/base_toolbar_back"
@@ -15,7 +15,6 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:paddingRight="15dp"
-        android:text="战报"
         android:textColor="@color/base_grey_c1"
         android:textSize="@dimen/base_fc_s3"/>
 
@@ -29,38 +28,23 @@
         android:src="@drawable/baselib_title_close_orange_icon"
         android:visibility="gone"/>
 
-    <FrameLayout
-        android:id="@+id/base_toolbar_search"
-        android:layout_width="207dp"
-        android:layout_height="30dp"
+    <TextView
+        android:id="@+id/base_toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:background="@color/base_grey_c9">
-
-        <Button
-            android:id="@+id/base_toolbar_search_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@null"
-            android:clickable="false"
-            android:drawableLeft="@drawable/baselib_title_search_grey_icon"
-            android:gravity="center"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:text="搜索"
-            android:textColor="@color/base_grey_c1"
-            android:textSize="@dimen/base_fc_s5"/>
-    </FrameLayout>
+        android:textColor="@color/base_grey_c1"
+        android:textSize="@dimen/base_fc_s2"/>
 
     <TextView
         android:id="@+id/base_toolbar_submit"
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentRight="true"
-        android:drawableLeft="@drawable/baselib_title_add_orange_icon"
         android:gravity="center"
         android:paddingLeft="15dp"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"/>
+        android:textSize="@dimen/base_fc_s3"
+        tools:text="保存"/>
 </RelativeLayout>

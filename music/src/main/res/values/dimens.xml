@@ -1,7 +1,10 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="horizontal_padding">16dp</dimen>
+    <dimen name="vertical_padding">16dp</dimen>
+
+    <dimen name="content_margin">16dp</dimen>
+
 
     <dimen name="toolbarElevation">4dp</dimen>
     <dimen name="appBarTopMargin">0dp</dimen>
@@ -28,7 +31,6 @@
 
 
 
-    <dimen name="content_margin">16dp</dimen>
 
     <!-- 特殊/底部保存按钮 -->
     <dimen name="base_fc_s1">22sp</dimen>

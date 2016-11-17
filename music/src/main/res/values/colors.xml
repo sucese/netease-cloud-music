@@ -30,7 +30,7 @@
     <!--辅助文字/顶部色块/时间色块-->
     <color name="base_grey_c6">#CCC</color>
     <!--顶部底部分割线/向右的箭头-->
-    <color name="base_grey_c7">#B3B3B3</color>
+    <color name="x">#B3B3B3</color>
     <!--工作台分割线/(正文)浅色隔线/Tag边框/时间色块-->
     <color name="base_grey_c8">#E6E6E6</color>
     <!--默认背景色-->

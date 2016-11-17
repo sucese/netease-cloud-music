@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:gravity="center_vertical">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baselib_toolbar_simple_global_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    tools:showIn="@layout/toolbar_common">
 
     <TextView
-        android:id="@+id/base_toolbar_back_custom"
+        android:id="@+id/base_toolbar_back"
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentLeft="true"
         android:gravity="center"
-        android:minWidth="24dp"
+        android:paddingRight="15dp"
+        android:text="战报"
         android:textColor="@color/base_grey_c1"
         android:textSize="@dimen/base_fc_s3"/>
+
+    <ImageView
+        android:id="@+id/base_toolbar_close"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_toRightOf="@id/base_toolbar_back"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:src="@drawable/baselib_title_close_orange_icon"
+        android:visibility="gone"/>
 
     <FrameLayout
         android:id="@+id/base_toolbar_search"
@@ -40,15 +54,13 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/base_toolbar_submit_custom"
+        android:id="@+id/base_toolbar_submit"
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/baselib_title_add_orange_icon"
         android:gravity="center"
-        android:maxEms="3"
-        android:maxLines="1"
+        android:paddingLeft="15dp"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"
-        android:visibility="gone"
-        tools:text="确定"/>
+        android:textSize="@dimen/base_fc_s3"/>
 </RelativeLayout>

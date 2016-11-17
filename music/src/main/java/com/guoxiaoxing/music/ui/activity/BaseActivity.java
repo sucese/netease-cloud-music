@@ -10,7 +10,6 @@ import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -20,7 +19,6 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -183,35 +181,35 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                super.onBackPressed();
-                return true;
-            case R.id.action_settings:
-                NavigationUtils.navigateToSettings(this);
-                return true;
-            case R.id.action_shuffle:
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        MusicPlayer.shuffleAll(BaseActivity.this);
-                    }
-                }, 80);
-
-                return true;
-            case R.id.action_search:
-                NavigationUtils.navigateToSearch(this);
-                return true;
-            case R.id.action_equalizer:
-                NavigationUtils.navigateToEqualizer(this);
-                return true;
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case android.R.id.home:
+//                super.onBackPressed();
+//                return true;
+//            case R.id.action_settings:
+//                NavigationUtils.navigateToSettings(this);
+//                return true;
+//            case R.id.action_shuffle:
+//                Handler handler = new Handler();
+//                handler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        MusicPlayer.shuffleAll(BaseActivity.this);
+//                    }
+//                }, 80);
+//
+//                return true;
+//            case R.id.action_search:
+//                NavigationUtils.navigateToSearch(this);
+//                return true;
+//            case R.id.action_equalizer:
+//                NavigationUtils.navigateToEqualizer(this);
+//                return true;
+//
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @Nullable
     @Override
@@ -286,7 +284,6 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
     }
-
 
     private void assignViews() {
         mRootLayout = (LinearLayout) findViewById(R.id.baselib_root_layout);
@@ -376,7 +373,7 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      * 工作台全局搜索
      */
     protected void enableDashboardGlobalSearchTitle() {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_gloabal_search);
+        View barView = enableCustomTitle(R.layout.toolbar_gloabal_search);
         mToolbar.addView(barView, new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.MATCH_PARENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
@@ -388,10 +385,10 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      * 全国车源标题栏
      */
     protected void enableFindCarAllTitle() {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_search_back);
+        View barView = enableCustomTitle(R.layout.toolbar_search_back);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back_custom);
         backView.setText("");
-        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
+        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
         View searchView = barView.findViewById(R.id.base_toolbar_search);
         TextView submitView = (TextView) barView.findViewById(R.id.base_toolbar_submit_custom);
         submitView.setText("全国");
@@ -407,7 +404,7 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
     }
 
     protected void enableReportTitle() {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_report);
+        View barView = enableCustomTitle(R.layout.toolbar_report);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back_custom);
         TextView submitView = (TextView) barView.findViewById(R.id.base_toolbar_submit_custom);
         backView.setOnClickListener(this);
@@ -432,7 +429,7 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      */
     protected void enableNormalTitle(String submitText) {
         resetTitle();
-        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
+        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
         mTitleBack.setVisibility(View.VISIBLE);
         if (TextUtils.isEmpty(submitText)) {
             mTitleSubmit.setVisibility(View.GONE);
@@ -465,7 +462,7 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
     }
 
     protected void enableCancelTitle(String submitText) {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_cancel);
+        View barView = enableCustomTitle(R.layout.toolbar_cancel);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back_custom);
         TextView submitView = (TextView) barView.findViewById(R.id.base_toolbar_submit_custom);
         mTitle = (TextView) barView.findViewById(R.id.base_toolbar_cancel_title);
@@ -479,8 +476,8 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
 
     protected void enableSearchTitle() {
         resetTitle();
-        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
-        mTitleSubmit.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_search_orange_icon, 0, 0, 0);
+        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
+        mTitleSubmit.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
         mTitleBack.setVisibility(View.VISIBLE);
         mTitleSubmit.setVisibility(View.VISIBLE);
     }
@@ -500,14 +497,14 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
     protected void enableTipsTitle(boolean hasBack) {
         resetTitle();
         mTitleBack.setVisibility(hasBack ? View.VISIBLE : View.GONE);
-        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
+        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
         mTitleSubmit.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_tips_orange_icon, 0, 0, 0);
         mTitleSubmit.setVisibility(View.VISIBLE);
     }
 
     protected void enableMoreTitle() {
         resetTitle();
-        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
+        mTitleBack.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
         mTitleSubmit.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_more_orange_icon, 0, 0, 0);
         mTitleBack.setVisibility(View.VISIBLE);
         mTitleSubmit.setVisibility(View.VISIBLE);
@@ -517,10 +514,10 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      * 返回键与搜索栏
      */
     protected void enableSearchBack() {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_search_back);
+        View barView = enableCustomTitle(R.layout.toolbar_search_back);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back_custom);
         backView.setText("");
-        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
+        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
         View searchView = barView.findViewById(R.id.base_toolbar_search);
         backView.setOnClickListener(this);
         searchView.setOnClickListener(this);
@@ -534,7 +531,7 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      * 取消与搜索栏
      */
     protected void enableSearchCancel() {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_search_cancel);
+        View barView = enableCustomTitle(R.layout.toolbar_search_cancel);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back_custom);
         View searchView = barView.findViewById(R.id.base_toolbar_search);
         TextView submitView = (TextView) barView.findViewById(R.id.base_toolbar_submit_custom);
@@ -578,7 +575,7 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      * 输入状态的搜索栏
      */
     protected void enableSearchEdit() {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_search_edit);
+        View barView = enableCustomTitle(R.layout.toolbar_search_edit);
         final EditText searchEditView = (EditText) barView.findViewById(R.id.base_toolbar_search_edit);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back_custom);
         backView.setOnClickListener(this);
@@ -643,10 +640,10 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      * 联盟商圈Bar
      */
     protected View enableCenterTxtBackAndSelect(String title) {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_center_txt_back);
+        View barView = enableCustomTitle(R.layout.toolbar_center_txt_back);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back);
         backView.setText("");
-        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
+        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
         View centerView = barView.findViewById(R.id.base_toolbar_search);
         TextView tvCenter = (TextView) centerView.findViewById(R.id.base_toolbar_title_custom);
         tvCenter.setText(title);
@@ -670,10 +667,10 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
      * @param initSideString 初始筛选title
      */
     protected void enableCarSourceTitle(String initSideString) {
-        View barView = enableCustomTitle(R.layout.baselib_toolbar_search_back_side);
+        View barView = enableCustomTitle(R.layout.toolbar_search_back_side);
         TextView backView = (TextView) barView.findViewById(R.id.base_toolbar_back);
         backView.setText("");
-        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_orange_icon, 0, 0, 0);
+        backView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baselib_title_back_icon, 0, 0, 0);
         View searchView = barView.findViewById(R.id.base_toolbar_search);
         TextView submitView = (TextView) barView.findViewById(R.id.base_toolbar_submit_custom);
         if (TextUtils.isEmpty(initSideString)) {

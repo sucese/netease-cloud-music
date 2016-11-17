@@ -14,7 +14,7 @@
         app:contentInsetEnd="@dimen/content_margin"
         app:contentInsetStart="@dimen/content_margin">
 
-        <include layout="@layout/baselib_toolbar_simple"/>
+        <include layout="@layout/toolbar_simple"/>
 
     </android.support.v7.widget.Toolbar>
 

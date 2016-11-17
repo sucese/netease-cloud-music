@@ -26,9 +26,12 @@ import com.guoxiaoxing.music.widget.FastScroller;
 import java.io.File;
 
 /**
- * Created by nv95 on 10.11.16.
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by
+ * guoxiaoxingse@gmail.com
+ *
+ * @author guoxiaoxing
+ * @since 16/11/17 下午4:39
  */
-
 public class FoldersFragment extends Fragment {
 
     private FolderAdapter mAdapter;

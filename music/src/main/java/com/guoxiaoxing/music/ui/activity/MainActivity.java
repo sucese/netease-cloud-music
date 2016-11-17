@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -49,6 +50,12 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     NavigationView navigationView;
     TextView songtitle, songartist;
     ImageView albumart;
+
+    private View mTitleView;
+    private ImageView mIvMore;
+    private TabLayout mTbTitle;
+    private ImageView mIvSearch;
+
     String action;
     Map<String, Runnable> navigationMap = new HashMap<>();
     Handler navDrawerRunnable = new Handler();
@@ -136,7 +143,9 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        enableNormalTitle();
+
+        mTitleView = enableCustomView(R.layout.toolbar_dashboard);
+
         setContentView(R.layout.activity_main);
 
         sMainActivity = this;
@@ -150,6 +159,14 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         navigationMap.put(Constants.NAVIGATE_ALBUM, navigateAlbum);
         navigationMap.put(Constants.NAVIGATE_ARTIST, navigateArtist);
 
+        setupView();
+    }
+
+    private void setupView() {
+        mIvMore = (ImageView) mTitleView.findViewById(R.id.iv_more);
+        mTbTitle = (TabLayout) mTitleView.findViewById(R.id.tb_title);
+        mIvSearch = (ImageView) mTitleView.findViewById(R.id.iv_search);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         panelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
 
@@ -160,6 +177,20 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         songtitle = (TextView) header.findViewById(R.id.song_title);
         songartist = (TextView) header.findViewById(R.id.song_artist);
 
+        mIvMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavigationUtils.navigateToSettings(MainActivity.this);
+            }
+        });
+
+        mIvSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavigationUtils.navigateToSearch(MainActivity.this);
+            }
+        });
+
         setPanelSlideListeners(panelLayout);
 
         navDrawerRunnable.postDelayed(new Runnable() {
@@ -169,7 +200,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
                 setupNavigationIcons(navigationView);
             }
         }, 700);
-
 
         if (TimberUtils.isMarshmallow()) {
             checkPermissionAndThenLoad();
@@ -200,7 +230,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         } else {
             navigateLibrary.run();
         }
-
         new initQuickControls().execute("");
     }
 
@@ -225,25 +254,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                if (isNavigatingMain()) {
-                    mDrawerLayout.openDrawer(GravityCompat.START);
-                } else super.onBackPressed();
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     public void onBackPressed() {
         if (panelLayout.isPanelExpanded()) {
             panelLayout.collapsePanel();
@@ -261,7 +271,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
                     public boolean onNavigationItemSelected(final MenuItem menuItem) {
                         updatePosition(menuItem);
                         return true;
-
                     }
                 });
     }
@@ -304,22 +313,18 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         switch (menuItem.getItemId()) {
             case R.id.nav_library:
                 runnable = navigateLibrary;
-
                 break;
             case R.id.nav_playlists:
                 runnable = navigatePlaylist;
-
                 break;
             case R.id.nav_folders:
                 runnable = navigateFolder;
-
                 break;
             case R.id.nav_nowplaying:
                 NavigationUtils.navigateToNowplaying(MainActivity.this, false);
                 break;
             case R.id.nav_queue:
                 runnable = navigateQueue;
-
                 break;
             case R.id.nav_settings:
                 NavigationUtils.navigateToSettings(MainActivity.this);

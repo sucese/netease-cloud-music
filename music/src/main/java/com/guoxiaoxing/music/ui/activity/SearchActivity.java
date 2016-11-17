@@ -65,7 +65,7 @@ public class SearchActivity extends BaseActivity implements SearchView.OnQueryTe
 
         super.onCreate(savedInstanceState);
 
-        enableNormalTitle();
+        enableNoTitle();
         setContentView(R.layout.activity_search);
 
         mImm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);

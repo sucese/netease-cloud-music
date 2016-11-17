@@ -21,18 +21,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.ui.activity.BaseActivity;
 import com.guoxiaoxing.music.adapter.SongsListAdapter;
 import com.guoxiaoxing.music.dataloader.SongLoader;
 import com.guoxiaoxing.music.listener.MusicStateListener;
 import com.guoxiaoxing.music.model.Song;
+import com.guoxiaoxing.music.ui.activity.BaseActivity;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 import com.guoxiaoxing.music.util.SortOrder;
 import com.guoxiaoxing.music.widget.DividerItemDecoration;
@@ -103,11 +101,11 @@ public class SongsFragment extends Fragment implements MusicStateListener {
         setHasOptionsMenu(true);
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.song_sort_by, menu);
-    }
+//    @Override
+//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        super.onCreateOptionsMenu(menu, inflater);
+//        inflater.inflate(R.menu.song_sort_by, menu);
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
