@@ -85,7 +85,7 @@
 
         <activity
             android:name="com.guoxiaoxing.music.ui.activity.NowPlayingActivity"
-            android:label="@string/activity_settings"
+            android:label="@string/activity_now_playing"
             android:theme="@style/AppThemeLight"/>
 
         <activity

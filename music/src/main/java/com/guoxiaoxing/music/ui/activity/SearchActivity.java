@@ -45,7 +45,7 @@ import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class SearchActivity extends BaseThemedActivity implements SearchView.OnQueryTextListener, View.OnTouchListener {
+public class SearchActivity extends BaseActivity implements SearchView.OnQueryTextListener, View.OnTouchListener {
 
     private final Executor mSearchExecutor = Executors.newSingleThreadExecutor();
     @Nullable
@@ -64,6 +64,8 @@ public class SearchActivity extends BaseThemedActivity implements SearchView.OnQ
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        enableNormalTitle();
         setContentView(R.layout.activity_search);
 
         mImm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);

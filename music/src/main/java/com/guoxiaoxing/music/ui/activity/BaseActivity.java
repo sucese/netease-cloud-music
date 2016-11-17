@@ -68,6 +68,7 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         assignViews();
         initToolbar();
         setListeners();
@@ -184,15 +185,6 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        if (!TimberUtils.hasEffectsPanel(BaseActivity.this)) {
-            menu.removeItem(R.id.action_equalizer);
-        }
-        ATE.applyMenu(this, getATEKey(), menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

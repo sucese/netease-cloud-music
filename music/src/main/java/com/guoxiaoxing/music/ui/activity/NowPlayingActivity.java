@@ -16,15 +16,12 @@ import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 
-/**
- * Created by naman on 01/01/16.
- */
+
 public class NowPlayingActivity extends BaseActivity implements ATEActivityThemeCustomizer, ATEToolbarCustomizer {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        enableNormalTitle();
         setContentView(R.layout.activity_nowplaying);
         SharedPreferences prefs = getSharedPreferences(Constants.FRAGMENT_ID, MODE_PRIVATE);
         String fragmentID = prefs.getString(Constants.NOWPLAYING_FRAGMENT_ID, Constants.TIMBER3);
@@ -34,7 +31,6 @@ public class NowPlayingActivity extends BaseActivity implements ATEActivityTheme
 
         fragmentManager.beginTransaction()
                 .replace(R.id.container, fragment).commit();
-
     }
 
     @StyleRes

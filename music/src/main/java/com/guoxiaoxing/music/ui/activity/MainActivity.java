@@ -70,7 +70,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     final PermissionCallback permissionReadstorageCallback = new PermissionCallback() {
         @Override
         public void permissionGranted() {
-            loadEverything();
+            setupData();
         }
 
         @Override
@@ -142,7 +142,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         isDarkTheme = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false);
 
         super.onCreate(savedInstanceState);
-        enableNormalTitle();
         setContentView(R.layout.activity_main);
 
         navigationMap.put(Constants.NAVIGATE_LIBRARY, navigateLibrary);
@@ -176,7 +175,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         if (TimberUtils.isMarshmallow()) {
             checkPermissionAndThenLoad();
         } else {
-            loadEverything();
+            setupData();
         }
 
         addBackstackListener();
@@ -195,7 +194,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         }
     }
 
-    private void loadEverything() {
+    private void setupData() {
         Runnable navigation = navigationMap.get(action);
         if (navigation != null) {
             navigation.run();
@@ -209,7 +208,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     private void checkPermissionAndThenLoad() {
         //check for permission
         if (Nammu.checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE)) {
-            loadEverything();
+            setupData();
         } else {
             if (Nammu.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
                 Snackbar.make(panelLayout, "Timber will need to read external storage to display songs on your device.",

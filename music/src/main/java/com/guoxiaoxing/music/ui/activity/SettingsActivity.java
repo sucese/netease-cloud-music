@@ -21,7 +21,7 @@ import com.guoxiaoxing.music.ui.subfragment.StyleSelectorFragment;
 import com.guoxiaoxing.music.util.Constants;
 import com.guoxiaoxing.music.util.PreferencesUtility;
 
-public class SettingsActivity extends BaseThemedActivity implements ColorChooserDialog.ColorCallback, ATEActivityThemeCustomizer {
+public class SettingsActivity extends BaseActivity implements ColorChooserDialog.ColorCallback, ATEActivityThemeCustomizer {
 
     String action;
 
@@ -33,6 +33,8 @@ public class SettingsActivity extends BaseThemedActivity implements ColorChooser
         else if (PreferencesUtility.getInstance(this).getTheme().equals("black"))
             setTheme(R.style.AppThemeNormalBlack);
         super.onCreate(savedInstanceState);
+
+        enableNormalTitle();
         setContentView(R.layout.activity_settings);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
