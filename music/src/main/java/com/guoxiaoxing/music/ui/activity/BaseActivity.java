@@ -457,9 +457,9 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
         } else {
             mTitleSubmit.setText(submitText);
             mTitleSubmit.setVisibility(View.VISIBLE);
-            mTitleSubmit.setTextColor(ContextCompat.getColor(this, R.color.base_fc_c11));
+            mTitleSubmit.setTextColor(ContextCompat.getColor(this, R.color.base_grey_c1));
         }
-        mTitle.setTextColor(ContextCompat.getColor(this, R.color.base_fc_c11));
+        mTitle.setTextColor(ContextCompat.getColor(this, R.color.base_grey_c1));
         mToolbar.setBackgroundColor(color);
 
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
     <TextView
         android:id="@+id/base_toolbar_back_custom"
@@ -11,8 +11,8 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:text="取消"
-        android:textColor="@color/base_fc_c1"
-        android:textSize="@dimen/base_fc_s3" />
+        android:textColor="@color/base_grey_c1"
+        android:textSize="@dimen/base_fc_s3"/>
 
     <TextView
         android:id="@+id/base_toolbar_cancel_title"
@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:textColor="@color/base_fc_c11"
-        android:textSize="@dimen/base_fc_s2" />
+        android:textColor="@color/base_grey_c1"
+        android:textSize="@dimen/base_fc_s2"/>
 
     <TextView
         android:id="@+id/base_toolbar_submit_custom"
@@ -32,7 +32,7 @@
         android:maxEms="3"
         android:maxLines="1"
         android:text="确定"
-        android:textColor="@color/base_fc_c1"
-        android:textSize="@dimen/base_fc_s3" />
+        android:textColor="@color/base_grey_c1"
+        android:textSize="@dimen/base_fc_s3"/>
 
 </RelativeLayout>

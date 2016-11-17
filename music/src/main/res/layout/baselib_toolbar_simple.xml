@@ -15,7 +15,7 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:paddingRight="15dp"
-        android:textColor="@color/base_fc_c1"
+        android:textColor="@color/base_grey_c1"
         android:textSize="@dimen/base_fc_s3"/>
 
     <ImageView
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:textColor="@color/base_fc_c11"
+        android:textColor="@color/base_grey_c1"
         android:textSize="@dimen/base_fc_s2"/>
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_alignParentRight="true"
         android:gravity="center"
         android:paddingLeft="15dp"
-        android:textColor="@color/base_fc_c1"
+        android:textColor="@color/base_grey_c1"
         android:textSize="@dimen/base_fc_s3"
         tools:text="保存"/>
 </RelativeLayout>

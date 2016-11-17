@@ -3,7 +3,6 @@ package com.afollestad.appthemeengine;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -20,7 +19,6 @@ import com.afollestad.appthemeengine.processors.Processor;
 import com.afollestad.appthemeengine.processors.RecyclerViewProcessor;
 import com.afollestad.appthemeengine.processors.ScrollViewProcessor;
 import com.afollestad.appthemeengine.processors.SearchViewProcessor;
-import com.afollestad.appthemeengine.processors.TabLayoutProcessor;
 import com.afollestad.appthemeengine.processors.ToolbarProcessor;
 
 import java.util.HashMap;
@@ -43,7 +41,7 @@ class ATEBase {
         mProcessors.put(RecyclerView.class.getName(), new RecyclerViewProcessor());
         mProcessors.put(Toolbar.class.getName(), new ToolbarProcessor());
         mProcessors.put(NavigationView.class.getName(), new NavigationViewProcessor());
-        mProcessors.put(TabLayout.class.getName(), new TabLayoutProcessor());
+//        mProcessors.put(TabLayout.class.getName(), new TabLayoutProcessor());
         mProcessors.put(SearchView.class.getName(), new SearchViewProcessor());
     }
 

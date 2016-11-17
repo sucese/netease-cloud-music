@@ -14,7 +14,10 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="tab_indicator_accent_color,bg_primary_color"/>
+            android:tag="tab_indicator_accent_color,bg_primary_color"
+            app:tabBackground="@color/base_grey_c1"
+            app:tabIndicatorColor="@color/primary"
+            app:tabTextColor="@color/primary_text"/>
 
     </android.support.design.widget.AppBarLayout>
 

@@ -10,7 +10,7 @@
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="@drawable/baselib_search_bg_grey"
+        android:background="@color/base_grey_c9"
         android:orientation="horizontal"
         android:weightSum="1">
 
@@ -27,8 +27,8 @@
             android:inputType="text"
             android:maxLines="1"
             android:paddingLeft="8dp"
-            android:textColor="@color/base_fc_c2"
-            android:textColorHint="@color/base_fc_c5"
+            android:textColor="@color/base_grey_c1"
+            android:textColorHint="@color/base_grey_c5"
             android:textSize="@dimen/base_fc_s5"/>
 
         <ImageView
@@ -49,6 +49,6 @@
         android:layout_marginLeft="16dp"
         android:gravity="center"
         android:text="取消"
-        android:textColor="@color/base_fc_c1"
+        android:textColor="@color/base_grey_c1"
         android:textSize="@dimen/base_fc_s3"/>
 </LinearLayout>

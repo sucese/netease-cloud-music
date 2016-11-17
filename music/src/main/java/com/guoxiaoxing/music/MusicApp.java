@@ -48,8 +48,8 @@ public class MusicApp extends Application {
         if (!ATE.config(this, "light_theme").isConfigured()) {
             ATE.config(this, "light_theme")
                     .activityTheme(R.style.AppThemeLight)
-                    .primaryColorRes(R.color.colorPrimaryLightDefault)
-                    .accentColorRes(R.color.colorAccentLightDefault)
+                    .primaryColorRes(R.color.primary)
+                    .accentColorRes(R.color.accent)
                     .coloredNavigationBar(false)
                     .usingMaterialDialogs(true)
                     .commit();
@@ -67,8 +67,8 @@ public class MusicApp extends Application {
             ATE.config(this, "light_theme_notoolbar")
                     .activityTheme(R.style.AppThemeLight)
                     .coloredActionBar(false)
-                    .primaryColorRes(R.color.colorPrimaryLightDefault)
-                    .accentColorRes(R.color.colorAccentLightDefault)
+                    .primaryColorRes(R.color.primary)
+                    .accentColorRes(R.color.accent)
                     .coloredNavigationBar(false)
                     .usingMaterialDialogs(true)
                     .commit();
