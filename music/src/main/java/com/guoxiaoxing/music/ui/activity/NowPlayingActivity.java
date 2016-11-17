@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.StyleRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.view.Window;
 
 import com.afollestad.appthemeengine.Config;
 import com.afollestad.appthemeengine.customizers.ATEActivityThemeCustomizer;
@@ -22,6 +23,7 @@ public class NowPlayingActivity extends BaseActivity implements ATEActivityTheme
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        enableNoTitle();
         setContentView(R.layout.activity_nowplaying);
         SharedPreferences prefs = getSharedPreferences(Constants.FRAGMENT_ID, MODE_PRIVATE);
         String fragmentID = prefs.getString(Constants.NOWPLAYING_FRAGMENT_ID, Constants.TIMBER3);

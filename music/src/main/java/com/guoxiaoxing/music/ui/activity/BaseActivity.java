@@ -20,7 +20,6 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +30,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.afollestad.appthemeengine.ATE;
 import com.afollestad.appthemeengine.ATEActivity;
 import com.guoxiaoxing.music.ITimberService;
 import com.guoxiaoxing.music.MusicPlayer;
@@ -41,7 +39,6 @@ import com.guoxiaoxing.music.listener.MusicStateListener;
 import com.guoxiaoxing.music.ui.subfragment.QuickControlsFragment;
 import com.guoxiaoxing.music.util.Helpers;
 import com.guoxiaoxing.music.util.NavigationUtils;
-import com.guoxiaoxing.music.util.TimberUtils;
 import com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout;
 
 import java.lang.ref.WeakReference;
@@ -739,12 +736,12 @@ public class BaseActivity extends ATEActivity implements View.OnClickListener, S
 
         @Override
         protected void onPostExecute(String result) {
-//            QuickControlsFragment.topContainer.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    NavigationUtils.navigateToNowplaying(BaseActivity.this, false);
-//                }
-//            });
+            QuickControlsFragment.topContainer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NavigationUtils.navigateToNowplaying(BaseActivity.this, false);
+                }
+            });
         }
 
         @Override

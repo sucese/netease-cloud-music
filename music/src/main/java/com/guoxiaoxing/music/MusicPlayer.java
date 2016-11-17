@@ -29,7 +29,7 @@ import java.util.WeakHashMap;
  * guoxiaoxingse@gmail.com
  *
  * @author guoxiaoxing
- * @since 16/11/17 上午10:32
+ * @since 16/11/17 上午10:35
  */
 public class MusicPlayer {
 

@@ -135,14 +135,13 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        enableNormalTitle();
+        setContentView(R.layout.activity_main);
 
         sMainActivity = this;
         action = getIntent().getAction();
-
         isDarkTheme = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false);
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         navigationMap.put(Constants.NAVIGATE_LIBRARY, navigateLibrary);
         navigationMap.put(Constants.NAVIGATE_PLAYLIST, navigatePlaylist);

@@ -21,8 +21,7 @@
         <item name="stateSelector">@color/state_selector_light</item>
         <item name="progressBackgroundColor">@color/progressBackgroundColorLight</item>
         <item name="progressDrawable">@drawable/progress_drawable</item>
-        <item name="progressDrawableWithBackground">@drawable/progress_drawable_withbackground
-        </item>
+        <item name="progressDrawableWithBackground">@drawable/progress_drawable_withbackground</item>
         <item name="ate_key">light_theme</item>
     </style>
 

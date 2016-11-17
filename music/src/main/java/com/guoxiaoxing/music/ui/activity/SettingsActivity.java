@@ -8,7 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.StyleRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.afollestad.appthemeengine.ATE;
@@ -36,11 +35,6 @@ public class SettingsActivity extends BaseActivity implements ColorChooserDialog
 
         enableNormalTitle();
         setContentView(R.layout.activity_settings);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         action = getIntent().getAction();
 

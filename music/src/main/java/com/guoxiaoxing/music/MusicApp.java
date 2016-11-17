@@ -17,7 +17,7 @@ import io.fabric.sdk.android.Fabric;
  * guoxiaoxingse@gmail.com
  *
  * @author guoxiaoxing
- * @since 16/11/17 上午10:29
+ * @since 16/11/17 上午10:35
  */
 public class MusicApp extends Application {
 

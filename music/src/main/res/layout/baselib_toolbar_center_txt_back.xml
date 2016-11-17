@@ -31,7 +31,7 @@
             android:gravity="center"
             android:minHeight="0dp"
             android:minWidth="0dp"
-            android:textColor="@color/base_fc_c2"
+            android:textColor="@color/base_fc_c11"
             android:textSize="@dimen/base_fc_s2"/>
 
     </FrameLayout>
