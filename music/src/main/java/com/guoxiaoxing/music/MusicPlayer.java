@@ -17,13 +17,20 @@ import android.provider.BaseColumns;
 import android.provider.MediaStore;
 import android.widget.Toast;
 
-import com.guoxiaoxing.music.dataloader.SongLoader;
 import com.guoxiaoxing.music.aidl.MusicPlaybackTrack;
+import com.guoxiaoxing.music.dataloader.SongLoader;
 import com.guoxiaoxing.music.util.TimberUtils.IdType;
 
 import java.util.Arrays;
 import java.util.WeakHashMap;
 
+/**
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by
+ * guoxiaoxingse@gmail.com
+ *
+ * @author guoxiaoxing
+ * @since 16/11/17 上午10:32
+ */
 public class MusicPlayer {
 
     private static final WeakHashMap<Context, ServiceBinder> mConnectionMap;
