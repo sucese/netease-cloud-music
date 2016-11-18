@@ -16,7 +16,7 @@
         android:gravity="center"
         android:paddingRight="15dp"
         android:text="战报"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"/>
 
     <ImageView
@@ -35,7 +35,7 @@
         android:layout_height="30dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:background="@color/base_grey_c9">
+        android:background="@color/base_grey_900">
 
         <Button
             android:id="@+id/base_toolbar_search_title"
@@ -49,7 +49,7 @@
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:text="搜索"
-            android:textColor="@color/base_grey_c1"
+            android:textColor="@color/base_color_white"
             android:textSize="@dimen/base_font_s5"/>
     </FrameLayout>
 
@@ -61,6 +61,6 @@
         android:drawableLeft="@drawable/baselib_title_add_orange_icon"
         android:gravity="center"
         android:paddingLeft="15dp"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"/>
 </RelativeLayout>

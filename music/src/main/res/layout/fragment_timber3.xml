@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
 
-    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -20,12 +19,12 @@
                 android:id="@+id/album_art"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#22000000" />
+                android:background="#22000000"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -35,7 +34,7 @@
                 android:layout_marginTop="@dimen/appBarTopMargin"
                 android:background="@android:color/transparent"
                 android:theme="@style/Theme.AppCompat"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
         </FrameLayout>
 
@@ -70,7 +69,7 @@
                         android:layout_marginRight="130dp"
                         android:ellipsize="end"
                         android:singleLine="true"
-                        android:textSize="25sp" />
+                        android:textSize="25sp"/>
 
                     <TextView
                         android:id="@+id/song_artist"
@@ -81,7 +80,7 @@
                         android:maxLines="1"
                         android:paddingTop="3dp"
 
-                        android:textSize="14sp" />
+                        android:textSize="14sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -95,7 +94,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:scaleType="center" />
+                        android:scaleType="center"/>
 
                     <ImageView
                         android:id="@+id/repeat"
@@ -103,7 +102,7 @@
                         android:layout_height="48dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:paddingLeft="5dp"
-                        android:scaleType="center" />
+                        android:scaleType="center"/>
                 </LinearLayout>
             </RelativeLayout>
 
@@ -115,14 +114,14 @@
                 android:maxHeight="2dp"
                 android:paddingTop="10dp"
                 android:progress="30"
-                android:tag="tint_accent_color" />
+                android:tag="tint_accent_color"/>
 
 
             <TextView
                 android:id="@+id/song_album"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone" />
+                android:visibility="gone"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -133,14 +132,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:paddingLeft="25dp" />
+                    android:paddingLeft="25dp"/>
 
                 <TextView
                     android:id="@+id/song_duration"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="25dp" />
+                    android:paddingRight="25dp"/>
             </RelativeLayout>
 
 
@@ -162,7 +161,7 @@
                     android:scaleType="center"
                     app:materialIcon="skip_previous"
                     app:materialIconColor="?attr/iconColor"
-                    app:materialIconSize="35dp" />
+                    app:materialIconSize="35dp"/>
 
                 <FrameLayout
                     android:layout_width="75dp"
@@ -180,7 +179,7 @@
                         android:layout_gravity="center"
                         android:clickable="true"
                         android:scaleType="fitCenter"
-                        android:tag="bg_tint_accent_color" />
+                        android:tag="bg_tint_accent_color"/>
                 </FrameLayout>
 
                 <net.steamcrafted.materialiconlib.MaterialIconView
@@ -194,12 +193,10 @@
                     android:scaleType="center"
                     app:materialIcon="skip_next"
                     app:materialIconColor="?attr/iconColor"
-                    app:materialIconSize="35dp" />
+                    app:materialIconSize="35dp"/>
             </LinearLayout>
 
         </LinearLayout>
 
     </android.support.percent.PercentRelativeLayout>
-
-
 </android.support.design.widget.CoordinatorLayout>

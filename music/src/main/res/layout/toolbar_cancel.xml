@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:text="取消"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"/>
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s2"/>
 
     <TextView
@@ -32,7 +32,7 @@
         android:maxEms="3"
         android:maxLines="1"
         android:text="确定"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"/>
 
 </RelativeLayout>

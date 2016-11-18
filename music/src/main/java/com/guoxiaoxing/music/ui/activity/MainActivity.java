@@ -2,7 +2,7 @@ package com.guoxiaoxing.music.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -10,13 +10,10 @@ import android.widget.ImageView;
 
 import com.afollestad.appthemeengine.customizers.ATEActivityThemeCustomizer;
 import com.guoxiaoxing.music.R;
-import com.guoxiaoxing.music.adapter.HomeAdapter;
+import com.guoxiaoxing.music.adapter.MainAdapter;
 import com.guoxiaoxing.music.ui.base.BaseActivity;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends BaseActivity implements ATEActivityThemeCustomizer {
 
@@ -31,11 +28,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
 
     private boolean isDarkTheme;
 
-    String action;
-    Map<String, Runnable> navigationMap = new HashMap<>();
-    Handler navDrawerRunnable = new Handler();
-    Runnable runnable;
-
     public static MainActivity getInstance() {
         return sMainActivity;
     }
@@ -46,7 +38,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
 
         mTitleView = enableCustomView(R.layout.toolbar_dashboard);
         setContentView(R.layout.activity_main);
-
+        isDarkTheme = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false);
         sMainActivity = this;
         setupView();
         setupData();
@@ -76,8 +68,8 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
 
         setPanelSlideListeners(panelLayout);
 
-        HomeAdapter homeAdapter = new HomeAdapter(getSupportFragmentManager());
-        mVpContainer.setAdapter(homeAdapter);
+        MainAdapter mainAdapter = new MainAdapter(getSupportFragmentManager());
+        mVpContainer.setAdapter(mainAdapter);
         mTbTitle.setupWithViewPager(mVpContainer);
     }
 

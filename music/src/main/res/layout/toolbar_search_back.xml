@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:minWidth="24dp"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"/>
 
     <FrameLayout
@@ -21,7 +21,7 @@
         android:layout_height="30dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:background="@color/base_grey_c9">
+        android:background="@color/base_grey_900">
 
         <Button
             android:id="@+id/base_toolbar_search_title"
@@ -35,7 +35,7 @@
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:text="搜索"
-            android:textColor="@color/base_grey_c1"
+            android:textColor="@color/base_color_white"
             android:textSize="@dimen/base_font_s5"/>
     </FrameLayout>
 
@@ -47,7 +47,7 @@
         android:gravity="center"
         android:maxEms="3"
         android:maxLines="1"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"
         android:visibility="gone"
         tools:text="确定"/>

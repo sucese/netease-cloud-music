@@ -15,11 +15,11 @@ import com.guoxiaoxing.music.ui.fragment.MineFragment;
  * @author guoxiaoxing
  * @since 16/11/18 下午1:53
  */
-public class HomeAdapter extends FragmentPagerAdapter {
+public class MainAdapter extends FragmentPagerAdapter {
 
     private String[] titles = {"我的", "音乐馆", "发现"};
 
-    public HomeAdapter(FragmentManager fm) {
+    public MainAdapter(FragmentManager fm) {
         super(fm);
     }
 

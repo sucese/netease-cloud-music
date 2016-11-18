@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:minWidth="24dp"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"
         tools:text="取消"/>
 
@@ -31,7 +31,7 @@
             android:gravity="center"
             android:minHeight="0dp"
             android:minWidth="0dp"
-            android:textColor="@color/base_grey_c1"
+            android:textColor="@color/base_color_white"
             android:textSize="@dimen/base_font_s2"/>
 
     </FrameLayout>
@@ -44,7 +44,7 @@
         android:gravity="center"
         android:maxEms="3"
         android:maxLines="1"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"
         android:visibility="gone"
         tools:text="确定"/>

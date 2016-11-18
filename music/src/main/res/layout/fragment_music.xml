@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:elevation="0dp"
             android:tag="tab_indicator_accent_color,bg_primary_color"
-            app:tabBackground="@color/base_grey_c1"
+            app:tabBackground="@color/base_color_white"
             app:tabIndicatorColor="@color/primary"
             app:tabTextColor="@color/primary_text"/>
 

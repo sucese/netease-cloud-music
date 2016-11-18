@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:gravity="center"
         android:text="取消"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"/>
 
     <LinearLayout
@@ -20,7 +20,7 @@
         android:layout_height="30dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:background="@color/base_grey_c9">
+        android:background="@color/base_grey_900">
 
         <EditText
             android:id="@+id/base_toolbar_search_edit"
@@ -35,8 +35,8 @@
             android:inputType="text"
             android:maxLines="1"
             android:paddingLeft="8dp"
-            android:textColor="@color/base_grey_c1"
-            android:textColorHint="@color/base_grey_c5"
+            android:textColor="@color/base_color_white"
+            android:textColorHint="@color/base_grey_900"
             android:textSize="@dimen/base_font_s5"/>
 
         <ImageView
@@ -59,6 +59,6 @@
         android:maxEms="3"
         android:maxLines="1"
         android:text="确定"
-        android:textColor="@color/base_grey_c1"
+        android:textColor="@color/base_color_white"
         android:textSize="@dimen/base_font_s3"/>
 </RelativeLayout>

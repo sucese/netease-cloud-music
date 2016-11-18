@@ -18,13 +18,13 @@
         android:id="@+id/tb_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        app:tabIndicatorHeight="0dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        app:tabSelectedTextColor="@color/base_grey_c1"
+        android:layout_weight="1"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/base_color_white"
         app:tabTextAppearance="@style/TabTextStyle"
-        app:tabTextColor="@color/base_grey_c8"/>
+        app:tabTextColor="@color/base_grey_200"/>
 
     <ImageView
         android:id="@+id/iv_search"

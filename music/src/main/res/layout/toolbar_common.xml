@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/primary"
         android:minHeight="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
         app:contentInsetEnd="@dimen/base_dimen_16"
         app:contentInsetStart="@dimen/base_dimen_16">
 

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/album_art_blurred"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#77000000" />
+        android:background="#77000000"/>
 
-    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -46,7 +45,7 @@
                     android:scrollHorizontally="true"
                     android:singleLine="true"
                     android:textColor="#ffffff"
-                    android:textSize="23sp" />
+                    android:textSize="23sp"/>
 
                 <TextView
                     android:id="@+id/song_artist"
@@ -58,7 +57,7 @@
                     android:maxLines="1"
                     android:paddingTop="3dp"
                     android:textColor="#ffffff"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"/>
 
                 <android.support.percent.PercentRelativeLayout
                     android:layout_width="match_parent"
@@ -81,7 +80,7 @@
                             android:layout_centerInParent="true"
                             android:layout_gravity="center"
                             android:background="@android:color/transparent"
-                            android:scaleType="centerCrop" />
+                            android:scaleType="centerCrop"/>
 
                         <com.guoxiaoxing.music.widget.CircleImageView
                             android:layout_width="match_parent"
@@ -89,7 +88,7 @@
                             android:layout_centerInParent="true"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
-                            android:src="@color/black_translucent" />
+                            android:src="@color/black_translucent"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -101,7 +100,7 @@
                                 layout="@layout/song_elapsedtime"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center" />
+                                android:layout_gravity="center"/>
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -115,7 +114,7 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:background="?attr/selectableItemBackgroundBorderless"
-                                    android:scaleType="center" />
+                                    android:scaleType="center"/>
 
                                 <ImageView
                                     android:id="@+id/repeat"
@@ -123,7 +122,7 @@
                                     android:layout_height="48dp"
                                     android:background="?attr/selectableItemBackgroundBorderless"
                                     android:paddingLeft="5dp"
-                                    android:scaleType="center" />
+                                    android:scaleType="center"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -145,7 +144,7 @@
                         app:pointer_color="?attr/accentColor"
                         app:pointer_halo_border_width="1.5"
                         app:pointer_halo_color="?attr/accentColor"
-                        app:pointer_halo_width="0.5" />
+                        app:pointer_halo_width="0.5"/>
 
                 </android.support.percent.PercentRelativeLayout>
             </LinearLayout>
@@ -158,7 +157,7 @@
                 android:layout_marginTop="@dimen/appBarTopMargin"
                 android:background="@android:color/transparent"
                 android:theme="@style/Theme.AppCompat"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
 
         </FrameLayout>
@@ -182,7 +181,7 @@
                 android:scaleType="center"
                 app:materialIcon="skip_previous"
                 app:materialIconColor="#ffffff"
-                app:materialIconSize="35dp" />
+                app:materialIconSize="35dp"/>
 
             <FrameLayout
                 android:layout_width="75dp"
@@ -200,7 +199,7 @@
                     android:layout_gravity="center"
                     android:clickable="true"
                     android:scaleType="fitCenter"
-                    android:tag="bg_tint_accent_color" />
+                    android:tag="bg_tint_accent_color"/>
             </FrameLayout>
 
             <net.steamcrafted.materialiconlib.MaterialIconView
@@ -214,17 +213,16 @@
                 android:scaleType="center"
                 app:materialIcon="skip_next"
                 app:materialIconColor="#ffffff"
-                app:materialIconSize="35dp" />
+                app:materialIconSize="35dp"/>
         </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/queue_recyclerview_horizontal"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignParentBottom="true"/>
 
     </android.support.percent.PercentRelativeLayout>
-
 
 </android.support.design.widget.CoordinatorLayout>
 

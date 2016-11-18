@@ -9,52 +9,78 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/base_grey_c1"
-            android:gravity="center"
-            android:hint="@string/search_hint"
-            android:padding="@dimen/base_dimen_16"/>
+            android:layout_marginTop="@dimen/base_dimen_10"
+            android:background="@color/base_color_white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/base_dimen_10">
+
+            <TextView
+                style="@style/text_style_s3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/bitmap_ic_search"
+                android:gravity="center"
+                android:hint="@string/search_hint"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@null"
+                android:src="@drawable/bitmap_ic_mic"/>
+        </RelativeLayout>
+
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/base_dimen_10"
-            android:background="@color/base_grey_c1"
+            android:alignmentMode="alignBounds"
+            android:background="@color/base_color_white"
             android:columnCount="3"
             android:rowCount="2">
 
             <TextView
+                style="@style/text_style_s3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/selector_touch_grey"
                 android:padding="@dimen/base_dimen_20"
                 android:text="@string/song_native"/>
 
             <TextView
+                style="@style/text_style_s3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/base_dimen_20"
                 android:text="@string/song_download"/>
 
             <TextView
+                style="@style/text_style_s3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/base_dimen_20"
                 android:text="@string/song_play_recently"/>
 
             <TextView
+                style="@style/text_style_s3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/base_dimen_20"
                 android:text="@string/song_like"/>
 
             <TextView
+                style="@style/text_style_s3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/song_mv"/>
 
             <TextView
+                style="@style/text_style_s3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/base_dimen_20"
@@ -62,10 +88,11 @@
         </GridLayout>
 
         <TextView
+            style="@style/text_style_s3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/base_dimen_10"
-            android:background="@color/base_grey_c1"
+            android:background="@color/base_color_white"
             android:gravity="center"
             android:padding="@dimen/base_dimen_10"
             android:text="我的歌单"/>
