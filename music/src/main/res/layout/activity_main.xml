@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                                  xmlns:app="http://schemas.android.com/apk/res-auto"
                                                                   android:id="@+id/sliding_layout"
                                                                   android:layout_width="match_parent"
                                                                   android:layout_height="match_parent"
-                                                                  android:gravity="bottom">
+                                                                  android:gravity="bottom"
+                                                                  app:fadeColor="@android:color/transparent"
+                                                                  app:panelHeight="55dp"
+                                                                  app:shadowHeight="5dp">
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <FrameLayout
         android:id="@+id/quickcontrols_container"
         android:layout_width="match_parent"
-        android:layout_height="250dp">
-    </FrameLayout>
+        android:layout_height="250dp"/>
 </com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout>

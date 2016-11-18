@@ -75,3 +75,18 @@
                     .replace(R.id.fragment_container, fragment).commit();
         }
     };
+    
+
+        if (Intent.ACTION_VIEW.equals(action)) {
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    MusicPlayer.clearQueue();
+                    MusicPlayer.openFile(getIntent().getData().getPath());
+                    MusicPlayer.playOrPause();
+                    navigateNowplaying.run();
+                }
+            }, 350);
+        }
+    
