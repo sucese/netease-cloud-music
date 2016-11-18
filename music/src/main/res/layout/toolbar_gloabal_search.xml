@@ -17,7 +17,7 @@
         android:paddingRight="15dp"
         android:text="战报"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"/>
+        android:textSize="@dimen/base_font_s3"/>
 
     <ImageView
         android:id="@+id/base_toolbar_close"
@@ -50,7 +50,7 @@
             android:minWidth="0dp"
             android:text="搜索"
             android:textColor="@color/base_grey_c1"
-            android:textSize="@dimen/base_fc_s5"/>
+            android:textSize="@dimen/base_font_s5"/>
     </FrameLayout>
 
     <TextView
@@ -62,5 +62,5 @@
         android:gravity="center"
         android:paddingLeft="15dp"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"/>
+        android:textSize="@dimen/base_font_s3"/>
 </RelativeLayout>

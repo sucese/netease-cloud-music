@@ -22,7 +22,7 @@
         android:gravity="center_vertical"
         android:text="战报"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"
+        android:textSize="@dimen/base_font_s3"
         android:visibility="gone"/>
 
     <TextView
@@ -34,7 +34,7 @@
         android:gravity="center"
         android:textColor="@color/base_grey_c1"
         android:text="报表"
-        android:textSize="@dimen/base_fc_s2"/>
+        android:textSize="@dimen/base_font_s2"/>
 
     <TextView
         android:id="@+id/base_toolbar_submit_custom"
@@ -47,7 +47,7 @@
         android:maxEms="3"
         android:maxLines="1"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"
+        android:textSize="@dimen/base_font_s3"
         android:visibility="gone"
         tools:text="全国"/>
 </RelativeLayout>

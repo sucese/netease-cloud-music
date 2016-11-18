@@ -2,25 +2,18 @@ package com.guoxiaoxing.music.ui.activity;
 
 import android.Manifest;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.afollestad.appthemeengine.customizers.ATEActivityThemeCustomizer;
-import com.anjlab.android.iab.v3.BillingProcessor;
 import com.guoxiaoxing.music.MusicPlayer;
 import com.guoxiaoxing.music.R;
 import com.guoxiaoxing.music.permission.Nammu;
@@ -33,12 +26,9 @@ import com.guoxiaoxing.music.ui.fragment.MainFragment;
 import com.guoxiaoxing.music.ui.fragment.PlaylistFragment;
 import com.guoxiaoxing.music.ui.fragment.QueueFragment;
 import com.guoxiaoxing.music.util.Constants;
-import com.guoxiaoxing.music.util.Helpers;
 import com.guoxiaoxing.music.util.NavigationUtils;
 import com.guoxiaoxing.music.util.TimberUtils;
 import com.guoxiaoxing.music.widget.slidinguppanel.SlidingUpPanelLayout;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,9 +37,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
 
     private static MainActivity sMainActivity;
     SlidingUpPanelLayout panelLayout;
-    NavigationView navigationView;
-    TextView songtitle, songartist;
-    ImageView albumart;
 
     private View mTitleView;
     private ImageView mIvMore;
@@ -62,7 +49,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     Runnable runnable;
     Runnable navigateLibrary = new Runnable() {
         public void run() {
-            navigationView.getMenu().findItem(R.id.nav_library).setChecked(true);
             Fragment fragment = new MainFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, fragment).commitAllowingStateLoss();
@@ -87,7 +73,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     };
     Runnable navigatePlaylist = new Runnable() {
         public void run() {
-            navigationView.getMenu().findItem(R.id.nav_playlists).setChecked(true);
             Fragment fragment = new PlaylistFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.hide(getSupportFragmentManager().findFragmentById(R.id.fragment_container));
@@ -97,7 +82,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     };
     Runnable navigateFolder = new Runnable() {
         public void run() {
-            navigationView.getMenu().findItem(R.id.nav_folders).setChecked(true);
             Fragment fragment = new FoldersFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.hide(getSupportFragmentManager().findFragmentById(R.id.fragment_container));
@@ -107,7 +91,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     };
     Runnable navigateQueue = new Runnable() {
         public void run() {
-            navigationView.getMenu().findItem(R.id.nav_queue).setChecked(true);
             Fragment fragment = new QueueFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.hide(getSupportFragmentManager().findFragmentById(R.id.fragment_container));
@@ -133,7 +116,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
                     .replace(R.id.fragment_container, fragment).commit();
         }
     };
-    private DrawerLayout mDrawerLayout;
     private boolean isDarkTheme;
 
     public static MainActivity getInstance() {
@@ -166,15 +148,7 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         mTbTitle = (TabLayout) mTitleView.findViewById(R.id.tb_title);
         mIvSearch = (ImageView) mTitleView.findViewById(R.id.iv_search);
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         panelLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
-
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        View header = navigationView.inflateHeaderView(R.layout.nav_header);
-
-        albumart = (ImageView) header.findViewById(R.id.album_art);
-        songtitle = (TextView) header.findViewById(R.id.song_title);
-        songartist = (TextView) header.findViewById(R.id.song_artist);
 
         mIvMore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -191,14 +165,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
         });
 
         setPanelSlideListeners(panelLayout);
-
-        navDrawerRunnable.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                setupDrawerContent(navigationView);
-                setupNavigationIcons(navigationView);
-            }
-        }, 700);
 
         if (TimberUtils.isMarshmallow()) {
             checkPermissionAndThenLoad();
@@ -256,132 +222,14 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     public void onBackPressed() {
         if (panelLayout.isPanelExpanded()) {
             panelLayout.collapsePanel();
-        } else if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
-            mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
     }
 
-    private void setupDrawerContent(NavigationView navigationView) {
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(final MenuItem menuItem) {
-                        updatePosition(menuItem);
-                        return true;
-                    }
-                });
-    }
-
-    private void setupNavigationIcons(NavigationView navigationView) {
-        if (!isDarkTheme) {
-            navigationView.getMenu().findItem(R.id.nav_library).setIcon(R.drawable.library_music);
-            navigationView.getMenu().findItem(R.id.nav_playlists).setIcon(R.drawable.playlist_play);
-            navigationView.getMenu().findItem(R.id.nav_queue).setIcon(R.drawable.music_note);
-            navigationView.getMenu().findItem(R.id.nav_folders).setIcon(R.drawable.ic_folder_open_black_24dp);
-            navigationView.getMenu().findItem(R.id.nav_nowplaying).setIcon(R.drawable.bookmark_music);
-            navigationView.getMenu().findItem(R.id.nav_settings).setIcon(R.drawable.settings);
-            navigationView.getMenu().findItem(R.id.nav_help).setIcon(R.drawable.help_circle);
-            navigationView.getMenu().findItem(R.id.nav_about).setIcon(R.drawable.information);
-            navigationView.getMenu().findItem(R.id.nav_donate).setIcon(R.drawable.payment_black);
-        } else {
-            navigationView.getMenu().findItem(R.id.nav_library).setIcon(R.drawable.library_music_white);
-            navigationView.getMenu().findItem(R.id.nav_playlists).setIcon(R.drawable.playlist_play_white);
-            navigationView.getMenu().findItem(R.id.nav_queue).setIcon(R.drawable.music_note_white);
-            navigationView.getMenu().findItem(R.id.nav_folders).setIcon(R.drawable.ic_folder_open_white_24dp);
-            navigationView.getMenu().findItem(R.id.nav_nowplaying).setIcon(R.drawable.bookmark_music_white);
-            navigationView.getMenu().findItem(R.id.nav_settings).setIcon(R.drawable.settings_white);
-            navigationView.getMenu().findItem(R.id.nav_help).setIcon(R.drawable.help_circle_white);
-            navigationView.getMenu().findItem(R.id.nav_about).setIcon(R.drawable.information_white);
-            navigationView.getMenu().findItem(R.id.nav_donate).setIcon(R.drawable.payment_white);
-        }
-
-        try {
-            if (!BillingProcessor.isIabServiceAvailable(this)) {
-                navigationView.getMenu().removeItem(R.id.nav_donate);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void updatePosition(final MenuItem menuItem) {
-        runnable = null;
-
-        switch (menuItem.getItemId()) {
-            case R.id.nav_library:
-                runnable = navigateLibrary;
-                break;
-            case R.id.nav_playlists:
-                runnable = navigatePlaylist;
-                break;
-            case R.id.nav_folders:
-                runnable = navigateFolder;
-                break;
-            case R.id.nav_nowplaying:
-                NavigationUtils.navigateToNowplaying(MainActivity.this, false);
-                break;
-            case R.id.nav_queue:
-                runnable = navigateQueue;
-                break;
-            case R.id.nav_settings:
-                NavigationUtils.navigateToSettings(MainActivity.this);
-                break;
-            case R.id.nav_help:
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                Uri data = Uri.parse("mailto:namandwivedi14@gmail.com");
-                intent.setData(data);
-                startActivity(intent);
-                break;
-            case R.id.nav_about:
-                mDrawerLayout.closeDrawers();
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Helpers.showAbout(MainActivity.this);
-                    }
-                }, 350);
-
-                break;
-            case R.id.nav_donate:
-                startActivity(new Intent(MainActivity.this, DonateActivity.class));
-                break;
-        }
-
-        if (runnable != null) {
-            menuItem.setChecked(true);
-            mDrawerLayout.closeDrawers();
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    runnable.run();
-                }
-            }, 350);
-        }
-    }
-
-    public void setDetailsToHeader() {
-        String name = MusicPlayer.getTrackName();
-        String artist = MusicPlayer.getArtistName();
-
-        if (name != null && artist != null) {
-            songtitle.setText(name);
-            songartist.setText(artist);
-        }
-        ImageLoader.getInstance().displayImage(TimberUtils.getAlbumArtUri(MusicPlayer.getCurrentAlbumId()).toString(), albumart,
-                new DisplayImageOptions.Builder().cacheInMemory(true)
-                        .showImageOnFail(R.drawable.ic_empty_music2)
-                        .resetViewBeforeLoading(true)
-                        .build());
-    }
-
     @Override
     public void onMetaChanged() {
         super.onMetaChanged();
-        setDetailsToHeader();
     }
 
     @Override
@@ -394,12 +242,6 @@ public class MainActivity extends BaseActivity implements ATEActivityThemeCustom
     public void onRequestPermissionsResult(
             int requestCode, String[] permissions, int[] grantResults) {
         Nammu.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
-
-    private boolean isNavigatingMain() {
-        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-        return (currentFragment instanceof MainFragment || currentFragment instanceof QueueFragment
-                || currentFragment instanceof PlaylistFragment || currentFragment instanceof FoldersFragment);
     }
 
     private void addBackstackListener() {

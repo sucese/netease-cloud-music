@@ -1,15 +1,7 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="horizontal_padding">16dp</dimen>
-    <dimen name="vertical_padding">16dp</dimen>
-
-    <dimen name="content_margin">16dp</dimen>
-
-
     <dimen name="toolbarElevation">4dp</dimen>
     <dimen name="appBarTopMargin">0dp</dimen>
     <dimen name="statusBarHeight">0dp</dimen>
-
 
     <dimen name="detail_backdrop_height">256dp</dimen>
     <dimen name="card_margin">16dp</dimen>
@@ -29,21 +21,22 @@
     <dimen name="min_header_height">270dp</dimen>
     <dimen name="header_logo_size">100dp</dimen>
 
-
-
+    <dimen name="base_dimen_10">10dp</dimen>
+    <dimen name="base_dimen_16">16dp</dimen>
+    <dimen name="base_dimen_20">20dp</dimen>
 
     <!-- 特殊/底部保存按钮 -->
-    <dimen name="base_fc_s1">22sp</dimen>
+    <dimen name="base_font_s1">22sp</dimen>
     <!-- 顶部一级二级标题/List标题/价格 -->
-    <dimen name="base_fc_s2">18sp</dimen>
+    <dimen name="base_font_s2">18sp</dimen>
     <!-- 正文内容/内部List小标题/Table/底部按钮（多个）-->
-    <dimen name="base_fc_s3">16sp</dimen>
+    <dimen name="base_font_s3">16sp</dimen>
     <!-- 辅助文字 -->
-    <dimen name="base_fc_s4">15sp</dimen>
+    <dimen name="base_font_s4">15sp</dimen>
     <!-- Tag/辅助文字 -->
-    <dimen name="base_fc_s5">14sp</dimen>
+    <dimen name="base_font_s5">14sp</dimen>
     <!-- Tab Bar 标题 -->
-    <dimen name="base_fc_s6">12sp</dimen>
-    <dimen name="base_fc_s7">10sp</dimen>
+    <dimen name="base_font_s6">12sp</dimen>
+    <dimen name="base_font_s7">10sp</dimen>
 
 </resources>

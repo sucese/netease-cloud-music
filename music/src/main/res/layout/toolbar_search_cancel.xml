@@ -12,7 +12,7 @@
         android:gravity="center"
         android:text="取消"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"/>
+        android:textSize="@dimen/base_font_s3"/>
 
     <LinearLayout
         android:id="@+id/base_toolbar_search"
@@ -37,7 +37,7 @@
             android:paddingLeft="8dp"
             android:textColor="@color/base_grey_c1"
             android:textColorHint="@color/base_grey_c5"
-            android:textSize="@dimen/base_fc_s5"/>
+            android:textSize="@dimen/base_font_s5"/>
 
         <ImageView
             android:id="@+id/base_toolbar_close_custom"
@@ -60,5 +60,5 @@
         android:maxLines="1"
         android:text="确定"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"/>
+        android:textSize="@dimen/base_font_s3"/>
 </RelativeLayout>

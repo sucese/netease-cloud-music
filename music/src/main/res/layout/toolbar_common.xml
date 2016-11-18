@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:background="@color/primary"
         android:minHeight="?attr/actionBarSize"
-        app:contentInsetEnd="@dimen/content_margin"
-        app:contentInsetStart="@dimen/content_margin">
+        app:contentInsetEnd="@dimen/base_dimen_16"
+        app:contentInsetStart="@dimen/base_dimen_16">
 
         <include layout="@layout/toolbar_simple"/>
 

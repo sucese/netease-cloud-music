@@ -13,7 +13,7 @@
         android:gravity="center"
         android:minWidth="24dp"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"
+        android:textSize="@dimen/base_font_s3"
         tools:text="取消"/>
 
     <FrameLayout
@@ -36,7 +36,7 @@
             android:minWidth="0dp"
             android:text="搜索"
             android:textColor="@color/base_grey_c1"
-            android:textSize="@dimen/base_fc_s5"/>
+            android:textSize="@dimen/base_font_s5"/>
     </FrameLayout>
 
     <TextView
@@ -50,7 +50,7 @@
         android:gravity="center_vertical|right"
         android:singleLine="true"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"
+        android:textSize="@dimen/base_font_s3"
         android:visibility="gone"
         tools:text="确定"/>
 </RelativeLayout>

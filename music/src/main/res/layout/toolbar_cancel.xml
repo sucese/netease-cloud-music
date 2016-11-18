@@ -12,7 +12,7 @@
         android:gravity="center"
         android:text="取消"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"/>
+        android:textSize="@dimen/base_font_s3"/>
 
     <TextView
         android:id="@+id/base_toolbar_cancel_title"
@@ -21,7 +21,7 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s2"/>
+        android:textSize="@dimen/base_font_s2"/>
 
     <TextView
         android:id="@+id/base_toolbar_submit_custom"
@@ -33,6 +33,6 @@
         android:maxLines="1"
         android:text="确定"
         android:textColor="@color/base_grey_c1"
-        android:textSize="@dimen/base_fc_s3"/>
+        android:textSize="@dimen/base_font_s3"/>
 
 </RelativeLayout>
