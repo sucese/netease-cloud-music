@@ -1,9 +1,8 @@
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '24.0.3'
+    buildToolsVersion '25.0.3'
 
     defaultConfig {
         applicationId "com.guoxiaoxing.music"
