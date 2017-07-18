@@ -2,20 +2,165 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.guoxiaoxing.cloud.music">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
+        android:name=".CloudMusicApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.activity.LoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NetSearchWordsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PlayingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.guoxiaoxing.cloud.music.LAUNCH_NOW_PLAYING_ACTION" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.LocalSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PlaylistSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PlaylistManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AlbumsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DownActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PlaylistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RecentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NetItemChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ArtistDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RadioDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LockActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.package.name.lockscreen"
+            android:theme="@style/LockScreenTheme" />
+        <activity android:name=".ui.activity.RankPlaylistActivity" />
+        <activity android:name=".request.UiMonitorActivity" />
+
+        <service android:name=".service.download.DownService">
+            <intent-filter>
+                <action android:name="com.guoxiaoxing.cloud.music.downtaskadd" />
+                <action android:name="com.guoxiaoxing.cloud.music.resumestarttask" />
+                <action android:name="com.guoxiaoxing.cloud.music.startalltask" />
+                <action android:name="com.guoxiaoxing.cloud.music.multidowntaskadd" />
+                <action android:name="com.guoxiaoxing.cloud.music.pausetask" />
+                <action android:name="com.guoxiaoxing.cloud.music.pausealltask" />
+                <action android:name="com.guoxiaoxing.cloud.music.cacletask" />
+                <action android:name="com.guoxiaoxing.cloud.music.caclealltask" />
+            </intent-filter>
+
+        </service>
+        <service
+            android:name=".service.MediaService"
+            android:process=":main" />
+
+        <receiver android:name=".receiver.MediaButtonIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.LaunchNowPlayingReceiver">
+            <intent-filter>
+                <action android:name="com.guoxiaoxing.cloud.music.LAUNCH_NOW_PLAYING_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".widget.SimpleWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.guoxiaoxing.cloud.music.metachanged" />
+                <action android:name="com.wm.remusi.change_music" />
+                <action android:name="com.guoxiaoxing.cloud.music.progress" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_info" />
+        </receiver>
+
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 有米SDK为了兼容Android N应用间共享文件行为变更而需要配置的FileProvider-->
+        <!-- 这里主要为授予有米SDK拥有打开apk安装界面的功能-->
+        <!-- 请务必修改 android:authorities 为贵应用的标识，一般为 包名.fileProvider -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.guoxiaoxing.cloud.music.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+
     </application>
 
 </manifest>

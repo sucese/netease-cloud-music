@@ -27,12 +27,12 @@ v0.13b-
 * Bug fixes and improvements
 
 v0.122b-
-* Fix crash in search activity
+* Fix crash in activity_main_bar_search activity
 * Fix one time crash in marshmallow after allowing permission
 * Added albums view options(list,grid)
 
 v0.12b-
-* Fix crash in artist detail and search
+* Fix crash in artist detail and activity_main_bar_search
 * Add intent for equalizer
 * Ability to sort songs, albums and artists according to year,duration,track,number of songs, a-z, z-a etc
 

@@ -100,7 +100,7 @@
     <string name="settings">设置</string>
     <string name="about">关于</string>
     <string name="help_and_feedback">帮助与反馈</string>
-    <string name="search">搜索</string>
+    <string name="activity_main_bar_search">搜索</string>
     <string name="action_shuffle_all">随机</string>
     <string name="action_equalizer">均衡</string>
     <string name="search_library">在库中搜索</string>
